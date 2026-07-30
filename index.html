@@ -1,373 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alexei Oblomkov's home page</title>
+  <meta name="keywords"
+        content="Knot homology, Hilbert schemes, Gromov-Witten, Donaldson-Thomas, REU">
+  <meta name="description"
+        content="Homepage of Alexei Oblomkov: research and teaching materials">
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #555;
+      --accent: #7a1f2b;
+      --line: #d9d9d9;
+      --bg: #f4f4f2;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    header.site {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    }
+    header.site h1 {
+      margin: 0 0 .35rem;
+      font-size: 1.9rem;
+      letter-spacing: .2px;
+    }
+    header.site .contact {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    header.site .contact a { color: var(--accent); }
+    .links-row {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      font-weight: 600;
+    }
+    .links-row a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 1.25rem;
+    }
+    .links-row a:hover { text-decoration: underline; }
+
+    /* Tabs */
+    nav.tabs {
+      display: flex;
+      gap: .25rem;
+      margin: 1.75rem 0 0;
+      flex-wrap: wrap;
+    }
+    nav.tabs button {
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      border-bottom: none;
+      background: #e8e8e6;
+      color: var(--muted);
+      padding: .6rem 1.15rem;
+      border-radius: 8px 8px 0 0;
+    }
+    nav.tabs button:hover { color: var(--ink); }
+    nav.tabs button.active {
+      background: var(--card);
+      color: var(--accent);
+      border-color: var(--line);
+      position: relative;
+      top: 1px;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 0 10px 10px 10px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    }
+    .panel[hidden] { display: none; }
+    .panel h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+    .panel h2:not(:first-child) {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+    }
+    .panel a { color: var(--accent); }
+    .conferences a { display: inline-block; margin: .2rem 0; }
+    ol.papers { padding-left: 1.4rem; }
+    ol.papers li { margin-bottom: .85rem; }
+    ol.papers .ref { color: var(--muted); }
+    ul.students { list-style: none; padding-left: 0; }
+    ul.students li {
+      margin-bottom: 1.1rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--line);
+    }
+    ul.students .name { font-weight: 700; }
+    ul.students .title { font-style: italic; }
+    ul.students .meta { color: var(--muted); font-size: .9rem; }
+    .subhead { font-weight: 700; margin: 1.5rem 0 .5rem; }
+    .source-note { color: var(--muted); font-size: .85rem; margin-top: 1.5rem; }
+  </style>
+</head>
 
-<body bgcolor="lightgrey">
-  <head>
-<title>Alexei Oblomkov's home page</title>
-	       <meta name="keywords"
-		     content="Knot homology, Hilbert schemes, Gromov-Witten, Donaldson-Thomas, REU">
-	       <meta name="description"
-		     content="Homepage of Alexei Oblomkov: research and teaching materials">
-	       <meta http-equiv="Content-Type"
-		     content="text/html">
+<body>
+<div class="wrap">
 
-  </head>
+  <header class="site">
+    <h1>Alexei Oblomkov</h1>
+    <div class="contact">
+      <a href="http://www.math.umass.edu">Department of Mathematics and Statistics</a><br>
+      <a href="http://www.umass.edu">University of Massachusetts</a><br>
+      Lederle Graduate Research Tower<br>
+      710 North Pleasant Street<br>
+      Amherst, MA 01003-9305, USA<br>
+      <br>
+      Office: LGRT 1234H<br>
+      Tel: (++1)-413-545-2857<br>
+      Fax: (++1)-413-545-1801<br>
+      email: <a href="mailto:oblomkov@math.umass.edu">oblomkov@math.umass.edu</a>
+    </div>
+    <div class="links-row">
+      <a href="me.jpg">Photo</a>
+      <a href="CV2024.pdf">CV</a>
+    </div>
+  </header>
 
+  <nav class="tabs" role="tablist">
+    <button class="active" data-tab="research" role="tab">Research</button>
+    <button data-tab="teaching" role="tab">Teaching</button>
+    <button data-tab="conferences" role="tab">Conferences &amp; Activities</button>
+    <button data-tab="students" role="tab">PhD Students</button>
+  </nav>
 
-<BODY>
-<br>
-<H1>Alexei Oblomkov</H1>
-<a href="http://www.math.umass.edu">Department of Mathematics and Statistics</a><br>
-   <a href="http://www.umass.edu">University of Massachusetts</a><br>
+  <!-- ================= RESEARCH ================= -->
+  <section class="panel" id="research" role="tabpanel">
+    <h2>Papers and preprints</h2>
+    <ol class="papers">
+      <li><a href="https://arxiv.org/abs/2510.13039">A categorification of representations of $U_q(\mathfrak{gl}_{1|1})$</a> (with L. Rozansky).
 
-    Lederle Graduate Research Tower<br>
+      <li><a href="https://arxiv.org/abs/2510.07420">Newton-Okounkov bodies for nested Hilbert schemes</a> (with I. Cavey, E. Gorsky, J. Turner).
 
-    710 North Pleasant Street <br>
-    Amherst, MA 01003-9305<br>
-    USA<br>
-<br>
-Office: LGRT 1234H<br>
-Tel: (++1)-413-545-2857<br>
-Fax: (++1)-413-545-1801<br>
-email: <A HREF="mailto:oblomkov@math.umass.edu"> email</A><br>
+      <li><a href="https://arxiv.org/abs/2503.18449">Discriminants and motivic integration</a> (with O. Kivinen, G. Wyss).
 
-<BR>
+      <li><a href="https://arxiv.org/abs/2308.14692">Fixed loci of symplectic automorphisms of $K3^{[n]}$ and $n$-Kummer type manifolds</a> (with L. Kamenova, G. Mongardi).
 
+      <li><a href="https://arxiv.org/abs/2212.02665">Matrix factorizations and $gl(m|k)$-quantum invariants</a> (with L. Rozansky).
 
+      <li><a href="https://arxiv.org/abs/2210.12569">Generic curves and non-coprime Catalans</a> (with E. Gorsky, M. Mazin). <span class="ref">Algebraic Geometry (2026).</span>
 
+      <li><a href="https://arxiv.org/abs/2204.00303">The affine Springer fiber - sheaf correspondence</a> (with E. Gorsky, O. Kivinen). <span class="ref">Advances in Mathematics, vol. 464 (2025).</span>
 
+      <li><a href="https://arxiv.org/abs/2008.12514">Stationary Virasoro constraints for stable pairs on toric varieties</a> (with M. Moreira, A. Okounkov, R. Pandharipande). <span class="ref">Forum Math. Pi 10 (2022), Paper No. e20, 62 pp.</span>
 
+      <li><a href="https://arxiv.org/abs/1910.02037">A compactification of the moduli space of marked vertical lines in $\mathbb{C}^2$</a> (with N. Bottman).
 
+      <li><a href="https://arxiv.org/abs/1905.06511">Dualizable link homology</a> (with L. Rozansky).
 
-<hr>
+      <li><a href="https://arxiv.org/abs/1901.04052">Notes on matrix factorizations and knot homology</a>. <span class="ref">Lecture Notes in Math. 2248, Fond. CIME/CIME Found. Subser., Springer, Cham, 2019, 83&ndash;127.</span>
 
+      <li><a href="https://arxiv.org/abs/1901.03014">EGL formula for DT/PT theory of local curves</a>.
 
-<strong>
+      <li><a href="https://arxiv.org/abs/1812.06340">3D TQFT and HOMFLYPT homology</a> (with L. Rozansky). <span class="ref">Lett. Math. Phys. 113 (2023), no. 3, Paper No. 71, 62 pp.</span>
 
-<A href="me.jpg">Photo</A>
-<br>
-<A HREF="CV2024.pdf">CV</A>
-</strong>
+      <li><a href="https://arxiv.org/abs/1811.03257">Categorical Chern character and braid groups</a> (with L. Rozansky). <span class="ref">Adv. Math. 437 (2024), 66 pp.</span>
 
+      <li><a href="https://arxiv.org/abs/1809.02810">Symplectic involutions of $K3^{[n]}$ type and Kummer $n$ type manifolds</a> (with L. Kamenova, G. Mongardi). <span class="ref">Bull. Lond. Math. Soc. 54 (2022), no. 3, 894&ndash;909.</span>
 
-<!--<H2> Current Partial Support </H2><strong>
-<strong>
-<a href="">NSF  grant DMS-2200798</a> 
-</strong>
-<br>
-<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1760373&HistoricalAwards=false">NSF FGR grant DMS-1760373</a>
-<br><br>
+      <li><a href="https://arxiv.org/abs/1806.00714">GW/PT descendent correspondence via vertex operators</a> (with A. Okounkov, R. Pandharipande). <span class="ref">Comm. Math. Phys., 2019.</span>
 
--->
+      <li><a href="https://arxiv.org/abs/1801.09033">Affine Schubert calculus and double coinvariants</a> (with E. Carlsson).
 
+      <li><a href="https://arxiv.org/abs/1801.06201">A categorification of a cyclotomic Hecke algebra</a> (with L. Rozansky).
 
+      <li><a href="https://arxiv.org/abs/1710.05391">The cohomology ring of certain compactified Jacobians</a> (with Z. Yun).
 
+      <li><a href="https://arxiv.org/abs/1706.00124">HOMFLYPT homology of Coxeter links</a> (with L. Rozansky). <span class="ref">Transform. Groups 28 (2023), no. 3, 1245&ndash;1275.</span>
 
+      <li><a href="https://arxiv.org/abs/1702.03569">Affine Braid group, JM elements and knot homology</a> (with L. Rozansky). <span class="ref">Transform. Groups 24 (2019), no. 2, 531&ndash;544.</span>
 
+      <li><a href="https://arxiv.org/abs/1608.03227">Knot Homology and sheaves on the Hilbert scheme of points on the plane</a> (with L. Rozansky). <span class="ref">Selecta Math. (N.S.) 24 (2018), no. 3, 2351&ndash;2454.</span>
 
+      <li><a href="https://arxiv.org/abs/1510.01795">Lectures on knot homology</a> (with S. Nawata). <span class="ref">Contemp. Math. 680, Amer. Math. Soc., Providence, RI, 2016, 137&ndash;177.</span>
 
-<hr>
+      <li><a href="https://arxiv.org/abs/1407.5685">Geometric representations of graded and rational Cherednik algebras</a> (with Z. Yun). <span class="ref">Adv. Math. 292 (2016), 601&ndash;706.</span>
 
+      <li><a href="https://arxiv.org/abs/1207.4523">Torus knots and the rational DAHA</a> (with E. Gorsky, J. Rasmussen, V. Shende). <span class="ref">Duke Math. J. 163 (2014), no. 14, 2709&ndash;2794.</span>
 
+      <li><a href="https://arxiv.org/abs/1206.2226">On stable Khovanov homology of torus knots</a> (with E. Gorsky, J. Rasmussen). <span class="ref">Exp. Math. 22 (2013), no. 3, 265&ndash;281.</span>
 
-<H2>Current Teaching</H2><strong>
+      <li><a href="https://arxiv.org/abs/1201.2115">The Hilbert scheme of a plane curve singularity and the HOMFLY homology of its link</a> (with J. Rasmussen, V. Shende and appendix by E. Gorsky). <span class="ref">Geom. Topol. 22 (2018), no. 2, 645&ndash;691.</span>
 
-<!--  I am teaching <a href="topology/spring20.html"> MATH 672: Algebraic Topology </a> and -->
-<a href="LieAlg.html"> MATH 718: Introduction to Lie Theory.</a>
-  
- 
-<br>
- 
-</strong>
+      <li><a href="https://arxiv.org/abs/1003.1568">The Hilbert scheme of a plane curve singularity and the HOMFLY polynomial of its link</a> (with V. Shende). <span class="ref">Duke Math. J. 161 (2012), no. 7, 1277&ndash;1303.</span>
 
-<hr>
+      <li><a href="https://arxiv.org/abs/0809.3976">Gromov-Witten/Donaldson-Thomas correspondence for toric 3-folds</a> (with D. Maulik, A. Okounkov, R. Pandharipande). <span class="ref">Invent. Math. 186 (2011), no. 2, 435&ndash;479.</span>
 
+      <li><a href="https://arxiv.org/abs/0802.2739">Donaldson-Thomas theory of $A_n\times\mathbb{P}^1$</a> (with D. Maulik). <span class="ref">Compos. Math. 145 (2009), no. 5, 1249&ndash;1276.</span>
 
-<H2>Conferences and activities</H2><strong>
+      <li><a href="https://arxiv.org/abs/0802.2737">Quantum cohomology of the Hilbert scheme of points on $A_n$-resolutions</a> (with D. Maulik). <span class="ref">J. Amer. Math. Soc. 22 (2009), no. 4, 1055&ndash;1091.</span>
 
+      <li><a href="https://arxiv.org/abs/0801.2339">A Lie-theoretic construction of spherical symplectic reflection algebras</a> (with P. Etingof, S. Loktev, L. Rybnikov). <span class="ref">Transform. Groups 13 (2008), no. 3-4, 541&ndash;556.</span>
 
+      <li><a href="https://arxiv.org/abs/math/0511489">Harish-Chandra homomorphisms and symplectic reflection algebras for wreath-products</a> (with P. Etingof, V. Ginzburg, W. L. Gan). <span class="ref">Publ. Math. Inst. Hautes &Eacute;tudes Sci. No. 105 (2007), 91&ndash;155.</span>
 
+      <li><a href="https://arxiv.org/abs/math/0504395">Deformed Harish-Chandra homomorphism for the cyclic quiver</a>. <span class="ref">Math. Res. Lett. 14 (2007), no. 3, 359&ndash;372.</span>
 
+      <li><a href="https://arxiv.org/abs/math/0504089">Generalized double affine Hecke algebras of higher rank</a> (with P. Etingof, W. L. Gan). <span class="ref">J. Reine Angew. Math. 600 (2006), 177&ndash;201.</span>
 
-<a href="
-https://indico.global/event/9656/  
-"> Representations, Moduli and Duality
-July 21, 2025 to August 22, 2025.</a>
+      <li><a href="https://arxiv.org/abs/math/0409256">Finite dimensional representations of the double affine Hecke algebra of rank 1</a> (with E. Stoica). <span class="ref">J. Pure Appl. Algebra 213 (2009), no. 5, 766&ndash;771.</span>
 
-<br>
+      <li><a href="https://arxiv.org/abs/math/0406480">Generalized double affine Hecke algebras of rank 1 and quantized del Pezzo surfaces</a> (with P. Etingof, E. Rains). <span class="ref">Adv. Math. 212 (2007), no. 2, 749&ndash;796.</span>
 
-<a href="
-	 https://scgp.stonybrook.edu/archives/35449
-"> Hyperkahler quotients, singularities, and quivers: January 3 – February 24, 2023</a>
+      <li><a href="https://arxiv.org/abs/math/0311512">Vector valued spherical functions and Macdonald-Koornwinder polynomials</a> (with J. Stokman). <span class="ref">Compos. Math. 141 (2005), no. 5, 1310&ndash;1350.</span>
 
-<br>
+      <li><a href="https://arxiv.org/abs/math-ph/0311036">Laplace transformations and spectral theory of two-dimensional semidiscrete and discrete hyperbolic Schr&ouml;dinger operators</a> (with A. Penskoi). <span class="ref">Int. Math. Res. Not. 2005, no. 18, 1089&ndash;1126.</span>
 
+      <li><a href="https://arxiv.org/abs/math/0311005">Quantization, orbifold cohomology, and Cherednik algebras</a> (with P. Etingof). <span class="ref">Contemp. Math. 417, Amer. Math. Soc., Providence, RI, 2006, 171&ndash;182.</span>
 
- 
+      <li><a href="https://arxiv.org/abs/math/0306393">Double affine Hecke algebras of rank 1 and affine cubic surfaces</a>. <span class="ref">Int. Math. Res. Not. 2004, no. 18, 877&ndash;912.</span>
 
- <a href="
-  https://sites.google.com/view/nsf-rtg-umass2021/home
-"> Categorical braid group actions and categorical representation theory, June 14-June 18, 2021.</a>
+      <li><a href="https://arxiv.org/abs/math/0303190">Double affine Hecke algebras and Calogero-Moser spaces</a>. <span class="ref">Represent. Theory 8 (2004), 243&ndash;266.</span>
 
- <br>
- 
- <a href="
-  https://aimath.org/programs/researchcommunities/linkhom/
-">AIM research community: Link homology </a>
+      <li><a href="https://arxiv.org/abs/math/0212029">Generalized Lame operators</a> (with O. Chalykh, P. Etingof). <span class="ref">Comm. Math. Phys. 239 (2003), no. 1-2, 115&ndash;153.</span>
 
+      <li><a href="https://arxiv.org/abs/math/0202076">Heckman-Opdam's Jacobi polynomials for the $BC_n$ root system and generalized spherical functions</a>. <span class="ref">Adv. Math. 186 (2004), no. 1, 153&ndash;180.</span>
 
- 
- <hr>
+      <li><a href="https://arxiv.org/abs/math-ph/0010024">Two-dimensional algebro-geometric difference operators</a> (with A. Penskoi). <span class="ref">J. Phys. A 33 (2000), no. 50, 9255&ndash;9264.</span>
 
-  
-<!--<H2> REU program</H2><strorng><a href="REU2017.html"">Summer 2017</a>
-<hr>
--->
-<H2>
-Papers and preprints</H2>
+      <li><a href="isoenergy.pdf">The isoenergy spectral problem for multidimensional difference operators</a>. <span class="ref">Funktsional. Anal. i Prilozhen. 36 (2002), no. 2, 45&ndash;61; translation in Funct. Anal. Appl. 36 (2002), no. 2, 120&ndash;133.</span>
 
-<ol>
+      <li><a href="onspectr.pdf">On the spectral properties of two classes of difference periodic operators</a>. <span class="ref">Mat. Sb. 193 (2002), no. 4, 87&ndash;112; translation in Sb. Math. 193 (2002), no. 3-4, 559&ndash;584.</span>
 
+      <li><a href="diffops.pdf">Difference operators on two-dimensional regular lattices</a>. <span class="ref">Teoret. Mat. Fiz. 127 (2001), no. 1, 34&ndash;46; translation in Theoret. and Math. Phys. 127 (2001), no. 1, 435&ndash;445.</span>
 
+      <li><a href="harmosc.pdf">Harmonic oscillator and Darboux transformations in many dimensions</a> (with O. Chalykh). <span class="ref">Phys. Lett. A 267 (2000), no. 4, 256&ndash;264.</span>
 
-  <li><A HREF="https://arxiv.org/abs/2210.12569">   Generic curves and non-coprime Catalans
-<cite></cite>
-</A>(with E. Gorsky and M. Mazin ).
+      <li><a href="monfree.pdf">Monodromy-free Schrodinger operators with quadratically increasing potential</a>. <span class="ref">Teoret. Mat. Fiz. 121 (1999), no. 3, 374&ndash;386; translation in Theoret. and Math. Phys. 121 (1999), no. 3, 1574&ndash;1584.</span>
 
+      <li><a href="B2.pdf">Integrability of some quantum systems associated with the root system $B_2$</a>. <span class="ref">Vestnik Moskov. Univ. Ser. I Mat. Mekh. 1999, no. 2, 6&ndash;9; translation in Moscow Univ. Math. Bull. 54 (1999), no. 2, 5&ndash;8.</span>
 
-<li><A HREF="https://arxiv.org/abs/2204.00303">   The affine Springer fiber - sheaf correspondence
-<cite></cite>
-</A>(with E. Gorsky and O. Kivinen ).
+      <li><a href="congruences_en.ps">On congruences of lines of order one in $\mathbb{P}^3$</a> (with A. Inshakov, S. L'vovski, F. Zak). <span class="ref">Preprint (1999), Independent University of Moscow.</span>
+    </ol>
+  </section>
 
-  
-  <li><A HREF="https://arxiv.org/abs/2010.14546">Soergel bimodules and matrix factorizations
-<cite></cite>
-</A>(with L. Rozansky).
+  <!-- ================= TEACHING ================= -->
+  <section class="panel" id="teaching" role="tabpanel" hidden>
+    <h2>Current Teaching</h2>
+    <p>
+      <a href="LieAlg.html">MATH 718: Introduction to Lie Theory.</a>
+    </p>
+  </section>
 
+  <!-- ================= CONFERENCES ================= -->
+  <section class="panel" id="conferences" role="tabpanel" hidden>
+    <h2>Conferences and activities</h2>
+    <div class="conferences">
+      <a href="https://indico.global/event/9656/">Representations, Moduli and Duality &mdash; July 21 &ndash; August 22, 2025.</a><br>
+      <a href="https://scgp.stonybrook.edu/archives/35449">Hyperkahler quotients, singularities, and quivers &mdash; January 3 &ndash; February 24, 2023.</a><br>
+      <a href="https://sites.google.com/view/nsf-rtg-umass2021/home">Categorical braid group actions and categorical representation theory &mdash; June 14 &ndash; 18, 2021.</a><br>
+      <a href="https://aimath.org/programs/researchcommunities/linkhom/">AIM research community: Link homology.</a>
+    </div>
+  </section>
 
-<li><A HREF="https://arxiv.org/abs/2008.12514">Virasoro constraints for stable pairs on toric 3-folds<cite></cite>
-</A>(with M. Moreira, A. Okounkov, R. Pandharipande).
+  <!-- ================= PHD STUDENTS ================= -->
+  <section class="panel" id="students" role="tabpanel" hidden>
+    <h2>PhD Students</h2>
+    <ul class="students">
+      <li>
+        <span class="name">Arthur Wang</span>
+        <span class="meta">&mdash; University of Massachusetts Amherst, 2024</span><br>
+        <span class="title">
+          <a href="https://scholarworks.umass.edu/bitstreams/8cf81d75-7f2c-4fd0-8c59-8d50e46eb102/download">Khovanov homology and matrix factorizations</a>
+        </span>
+      </li>
+      <li>
+        <span class="name">Thomas Shelly</span>
+        <span class="meta">&mdash; University of Massachusetts Amherst, 2016; Visiting Assistant Professor, Mount Holyoke College</span><br>
+        <span class="title">
+          <a href="https://scholarworks.umass.edu/dissertations_2/804/">Skein Theory and Algebraic Geometry for the Two-Variable Kauffman Invariant of Links</a>
+        </span>
+      </li>
+      <li>
+        <span class="name">Tobias Wilson</span>
+        <span class="meta">&mdash; University of Massachusetts Amherst, 2015; Bloomberg</span><br>
+        <span class="title">Topology of the Affine Springer Fiber in Type A</span>
+      </li>
+    </ul>
 
+    <div class="subhead">Current students</div>
+    <ul class="students">
+      <li>
+        <span class="name">Pranav Kalkunte</span>
+        <span class="meta">&mdash; motivic integration.</span>
+      </li>
+      <li>
+        <span class="name">Chuijiao Zhang</span>
+        <span class="meta">&mdash; Springer theory for DAHAs.</span>
+      </li>
+    </ul>
 
-  
-<li><A HREF="https://arxiv.org/abs/1910.02037">A compactification of the moduli space of marked vertical lines in $\mathbb{C}^2$ <cite></cite>
-</A>(with N. Bottman).
+    <p class="source-note">
+      Source: <a href="https://www.mathgenealogy.org/id.php?id=34066">Mathematics Genealogy Project</a>.
+    </p>
+  </section>
 
+</div>
 
-  
-<li><A HREF="https://arxiv.org/abs/1905.06511">Dualizable link homology<cite></cite>
-</A>(with L. Rozansky).
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('nav.tabs button');
+    var panels = document.querySelectorAll('.panel');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (b) { b.classList.remove('active'); });
+        panels.forEach(function (p) { p.hidden = true; });
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).hidden = false;
+      });
+    });
+  })();
+</script>
 
-<li><A HREF="https://arxiv.org/abs/1901.04052"><cite>Notes on matrix factorizations and knot homology</cite>
-</A>.
-
-<li><A HREF="https://arxiv.org/abs/1901.03014"><cite>EGL formula for DT/PT theory of local curves</cite>
-</A>.
-
-<li><A HREF="https://arxiv.org/abs/1812.06340"><cite> 3D TQFT and HOMFLYPT homology</cite>
-</A>(with L. Rozansky).
-
-<li><A HREF="https://arxiv.org/abs/1811.03257"><cite>Categorical Chern character and braid groups</cite>
-</A>(with L. Rozansky).
-
-
-<li><A HREF="https://arxiv.org/abs/1809.02810"><cite>Symplectic involutions of $K3^{[n]}$ type and Kummer $n$ type manifolds</cite>
-</A>(with L. Kamenova and G. Mongardi).
-
-
-
-<li><A HREF="https://arxiv.org/abs/1806.00714"><cite>GW/PT correspondence with descendents</cite>
-</A>(with A. Okounkov and R. Pandharipande), Communications in Mathematical Physics, 2019.
-
-
-<li><A HREF="https://arxiv.org/abs/1801.09033"><cite>Affine Schubert calculus and double coinvariants</cite>
-</A>(with E. Carlsson).
-
-
-<li><A HREF="https://arxiv.org/abs/1801.06201"><cite>A categorification of a cyclotomic Hecke algebra</cite>
-</A>(with L. Rozansky).
-
-
-<li><A HREF="https://arxiv.org/abs/1710.05391"><cite>The cohomology ring of certain compactified Jacobians </cite>
-</A>(with Z. Yun).
-
-
-<li><A HREF="https://arxiv.org/abs/1706.00124"><cite>Homology of Coxeter links</cite>
-</A>(with L. Rozansky).
-
-<li><A HREF="https://arxiv.org/abs/1702.03569"><cite>Affine Braid group, JM elements and knot homology</cite> 
-</A>(with L. Rozansky), Transformation Groups, 2018, 14 pages.
-
-<BR>
-
-<li><A HREF="https://arxiv.org/abs/1608.03227"><cite>Knot Homology and sheaves on the Hilbert scheme of points on the plane </cite>
-</A>(with L. Rozansky),  Selecta Math. (N.S.) 24 (2018), no. 3, 2351--2454.  
-
-<BR>
-
-<li><A HREF="https://arxiv.org/abs/1510.01795"><cite>Lectures on knot homology</cite>
-</A>(with S. Nawata), Proceedings of "Workshop on Physics and Mathematics of Link Homology", at Centre de Recherches Mathematiques, Universite de Montreal, 2016.
-
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/1407.5685"><cite></cite>
-Geometric representations of graded and rational Cherednik algebras</A>, 
-(with Z. Yun),  Adv. Math. 292 (2016), 601--706. 
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/1207.4523"><cite></cite>
-Torus knots and the rational DAHA</A>, 
-(with E. Gorsky; J. Rasmussen; V. Shende),  Duke Math. J. 163 (2014), no. 14, 2709--2794.
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/1206.2226"><cite></cite>
-On stable Khovanov homology of torus knots</A>, 
-(with E. Gorsky; J. Rasmussen), Exp. Math. 22 (2013), no. 3, 265--281.
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/1201.2115"><cite></cite>
-The Hilbert scheme of a plane curve singularity and the HOMFLY homology of its link</A>, (with J. Rasmussen; V. Shende and appendix by E. Gorsky), Geometry and Topology. 22 (2018), no. 2, 645–691..
-<BR>
-
-<li><A HREF="http://xxx.lanl.gov/abs/1003.1568"><cite>
-</cite>The Hilbert scheme of a plane curve singularity and the HOMFLY polynomial of its link</A>,
-(with V. Shende), Duke Math. J. Volume 161, Number 7 (2012), 1277--1303.
-<BR>
-
-<li><A HREF="http://xxx.lanl.gov/abs/0809.3976"><cite>  
-</cite>Gromov-Witten/Donaldson-Thomas correspondence for toric 3-folds</A>,
-(with D. Maulik; A. Okounkov; 
-R. Pandharipande),  Invent. Math. 186 (2011), no. 2, 435–479.
-<BR>
-
-<li><A HREF="http://xxx.lanl.gov/abs/0802.2739"><cite> 
-</cite>Donaldson-Thomas theory of $ A_n\times P^1$,</A> (with D. Maulik), Compos. Math. 145 (2009), no. 5, 1249--1276.
-<BR>
-
-<li><A HREF="http://xxx.lanl.gov/abs/0802.2737"><cite> 
-</cite>Quantum cohomology of the Hilbert scheme of points on $A_n$-resolutions,</cite></A>
-(with D. Maulik), JAMS,  22  (2009),  no. 4, 1055-1091. 
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0409256"><cite> 
-</cite>Finite dimensional representations of the double affine Hecke algebra of rank 1, </A>
-(with E. Stoica),  J. Pure Appl. Algebra  213  (2009),  no. 5, 766--771.
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/0801.2339"><cite> 
-</cite>A Lie-theoretic construction of spherical symplectic reflection algebras, </A>
-(with  P. Etingof; S. Loktev; L. Rybnikov),   Transform. Groups,  13  (2008),  no. 3-4, 541--556.
-<BR>
-
-
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0511489"><cite> 
-</cite>Harish-Chandra homomorphisms and symplectic reflection algebras for wreath-products, </A>
-(with P. Etingof, V. Ginzburg, W. L. Gan),    Publ. Math. de l'IHES,  no. 105  (2007), 91--155.
-<BR>
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0511489"><cite> 
-</cite>Deformed Harish-Chandra homomorphism for the cyclic quiver, </A>
-Math. Res. Lett,  14  (2007),  no. 3, 359--372. 
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0406480"><cite> 
-</cite>Generalized double affine Hecke algebras of rank 1 and quantized del Pezzo surfaces,</A>
-(with P. Etingof and E. Rains),  Adv. Math.  212  (2007),  no. 2, 749--796. 
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0311005"><cite> 
-</cite>Quantization, orbifold cohomology, and Cherednik algebras,</A>
-(with P. Etingof),   Jack, Hall-Littlewood and Macdonald polynomials,  171--182, Contemp. Math., 417, Amer. Math. Soc., Providence, RI, 2006.
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0504089"><cite> 
-</cite>Generalized double affine Hecke algebras of higher rank,</A>
-(with P. Etingof, W. L. Gan),   J. Reine Angew. Math.  600  (2006), 177--201.
-<BR>
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0311512"><cite> 
-</cite>Vector valued spherical functions and Macdonald-Koornwinder polynomials,</A>
-(with J. Stokman),    Compos. Math.  141  (2005),  no. 5, 1310--1350.
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math-ph/0311036"><cite> 
-</cite>Laplace transformations and spectral theory of two-dimensional semidiscrete and discrete hyperbolic Schrödinger operators,</A>
-(with A. Penskoi),     Int. Math. Res. Not.  2005,  no. 18, 1089--1126.
-<BR>
-
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0306393"><cite> 
-</cite>Double affine Hecke algebras and Calogero-Moser spaces,</A>
- Represent. Theory  8  (2004), 243--266.
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0202076"><cite> 
-</cite>Heckman-Opdam's Jacobi polynomials for the $BC_n$ root system and generalized spherical functions,</A>
- Adv. Math.  186  (2004),  no. 1, 153--180.
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0306393"><cite> 
-</cite>Double affine Hecke algebras of rank 1 and affine cubic surfaces,</A>
- Int. Math. Res. Not.  2004,  no. 18, 877--912.
-<BR>
-
-<li><A HREF="http://xxx.lanl.gov/abs/math/0212029"><cite> 
-</cite>Generalized Lame operators,</A>
-(with O. Chalykh; P. Etingof), Comm. Math. Phys. 239 (2003), no. 1-2, 115--153.
-<BR>
-
-<li><A HREF="isoenergy.pdf"> 
-The isoenergy spectral problem for multidimensional difference operators,</A>
- Funktsional. Anal. i Prilozhen.  36  (2002),  no. 2, 45--61, 96;  translation in  Funct. Anal. Appl.  36  (2002),  no. 2, 120--133. 
-<BR>
-
-
-<li><A HREF="onspectr.pdf"> On the spectral properties of two classes of difference periodic operators,</A>
-  Mat. Sb.  193  (2002),  no. 4, 87--112;  translation in  Sb. Math.  193  (2002),  no. 3-4, 559--584. 
-<BR>
-
-
-<li><A HREF="diffops.pdf"> Difference operators on two-dimensional regular lattices,</A>
- Teoret. Mat. Fiz.  127  (2001),  no. 1, 34--46;  translation in  Theoret. and Math. Phys.  127  (2001),  no. 1, 435--445.  
-<BR>
-
-
-<li><A HREF="http://xxx.lanl.gov/abs/math-ph/0010024">Two-dimensional algebro-geometric difference operators. </A>
- (with A. Penskoi),  J. Phys. A  33  (2000),  no. 50, 9255--9264.  
-<BR>
-
-
-
-<li><A HREF="harmosc.pdf">Harmonic oscillator and Darboux transformations in many dimensions, </A>
- (with O. Chalykh),  Phys. Lett. A  267  (2000),  no. 4, 256--264.  
-<BR>
-
-
-<li><A HREF="monfree.pdf">Monodromy-free Schrodinger operators with quadratically increasing potential, </A>
-  Teoret. Mat. Fiz.  121  (1999),  no. 3, 374--386;  translation in  Theoret. and Math. Phys.  121  (1999),  no. 3, 1574--1584. 
-<BR>
-
-<li><A HREF="B2.pdf">Integrability of some quantum systems associated with the root system $B_2$, </A>
- Vestnik Moskov. Univ. Ser. I Mat. Mekh.  1999, , no. 2, 6--9, 72;  translation in  Moscow Univ. Math. Bull.  54  (1999),  no. 2, 5--8 
-<BR>
-
- 
-
-<li><A HREF="congruences_en.ps ">On congruences of lines of order one in $\mathbb{P}^3$,</A> (with A. Inshakov,
-S. L'vovski and F. Zak),
-preprint 1999, Independent University of Moscow.
-<BR>
-
-</ol>
+</body>
+</html>

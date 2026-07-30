@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Editor backups
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.toc
+*.nav
+*.snm
+*.bbl
+*.blg
+*.xoj
+auto/

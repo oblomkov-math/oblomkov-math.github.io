@@ -1,0 +1,31 @@
+#+TITLE: The theoretical part of REU17 project
+#+OPTIONS: tex:t
+* Combinatorics of partitions
+ We are interested in study of partitions in dimensions two and three.  The main objective is find a combinatorical explanation for
+ coincidence of PT and DT topological vertices. The main tool for us will be Python and Sage library. On the practical level, we plan to 
+ create a Python library that would handle 3D partions.
+
+
+** Partitions
+   The major treatise on the combinatorics in general and partitions in particular is the book by Stanley:  [[http://www-math.mit.edu/~rstan/ec/ec1toc.html][table of contents of volume 1 ]] [[http://www-math.mit.edu/~rstan/ec/ec2toc.html][table of contents of volume 2]].
+   Our focus will be the chapter 7 of volume 2. Our goal
+** RSK algirithm
+   RSK algorithm a backbone of enumerative combinatorics and many enumerative formulas for 3D partitions rely on this algorithm. Please read section 11 of chapter 7 of Stanley's book.
+** McMahon formula
+   McMahon formula is the following statement
+
+   \begin{equation}
+    \sum_{\pi\in 3D \mbox{ partitions}} q^{|\pi|}=\prod_{k>0}(1-q^k)^{-k}.
+   \end{equation}
+   There are many proofs of this statement. We will look at the proof from Stanley's book, read sections 12, 13 of Chaper 7 of Stanley's book.
+** The main problem
+   There is a natural generalization of the McMahon formula. Instead of usual 3D partitions  we can consider the infinite partitions with the infinite ends of given shape.
+   We denote such set by $3D_\mu$ where $\mu$ is shape at infinity. It turns out that we can count these partitions as well as usual partitions:
+   
+   \[
+   \sum_{\pi\in 3D_\mu} q^{|\pi|}=s_{\mu}(q^\rho)\prod_{k>0}(1-q^k)^{-k}.
+   \]
+   where $s_\mu$ is the Schur function.
+
+* Geometry of monomial ideals
+** Limit shapes

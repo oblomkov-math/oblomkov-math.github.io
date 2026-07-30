@@ -1,0 +1,683 @@
+\documentclass[11pt]{amsart}
+\usepackage{a4wide,amsfonts,amssymb,stmaryrd,amscd,amsmath,latexsym,amsbsy}
+%\documentstyle{article}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem*{thrm}{Theorem}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{pro}[theorem]{Proposition}
+%\newtheorem{defi}{Definition}
+\newtheorem{lem}[theorem]{Lemma}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{eg}{{Example}}
+\newtheorem{ex}{Exercise}
+\newtheorem*{sol}{Solution}
+\newtheorem*{LRrule}{Littlewood-Richardson rule}
+\newtheorem*{conj}{Conjecture}
+%\redefine{thebibliography}{Publications}
+\theoremstyle{definition}
+\newtheorem*{defi}{Definition}
+\theoremstyle{remark}
+\newtheorem{rema}{Remark}[section]
+\newcommand{\CC}{\mathbb C}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\solu}[1]{\begin{sol}{\bf (\ref{#1})}}
+\newcommand{\dd}{\partial}
+\newcommand{\gotg}{\mathfrak g}
+\newcommand{\gotk}{\mathfrak k}
+\pagestyle{plain}
+\begin{document}
+\section*{\bf{\huge Alexei Oblomkov}}
+\bigskip
+
+%{\bf Birth date}: 1 December 1976.
+
+%\medskip {\bf Birth place}: Ul'yanovsk, Russia.
+
+\begin{tabbing}
+Address:\quad\quad\quad\;\= 1235H, LGRT Tower\\
+                      \>University of Massachusetts\\
+\>  Amherst, MA 01003-9305\\
+
+Citizenship:\> Russia, US Permanent Resident since 2010, US citizen since 2014.
+\end{tabbing}
+
+\section*{\Large\underline{Research interests}}
+
+%\medskip
+
+%\begin{tabbing}
+
+\noindent Representation theory,  algebraic geometry, topology
+and mathematical physics.
+
+
+
+
+\section*{\Large\underline{Education}}
+\begin{tabbing}
+2005\quad\quad\quad\quad\quad\= Massachusetts Institute of
+Technology   \quad\quad\,\,\:\:\:\:\= Ph.D. in
+mathematics\\
+\>\quad\quad  \>  Advisor: Pavel Etingof\\
+%\>\quad \>  Title: Double Affine Hecke\\
+%\>\> Algebras and Noncommutative\\
+%\>\> Geometry\\ 
+1999-2001\> Independent University of
+Moscow\> Graduate Study\\
+1999-2001\>Moscow State University\> Graduate Study\\
+
+1998\> Independent University of Moscow\>MA in Pure Mathematics\\
+1998\> Moscow State University\>MA in Pure Mathematics
+\end{tabbing}
+
+
+\section*{\Large\underline{Employment}}
+
+\begin{tabbing}
+2018 Spring\quad\quad  MSRI \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad Research Professor\\
+2015-\quad\quad\quad\quad\;\;\;\= University of Massachusetts, Amherst\quad\quad\;\;\; Associate Professor\\
+2009-2015\quad\quad\;\;\;\= University of Massachusetts, Amherst\quad\quad\;\;\; Assistant Professor\\
+2008-2009\quad\quad\;\;\;\= Princeton University\quad\quad\quad\quad\quad\quad\quad
+\quad\quad\quad\;\; Visiting Assistant
+Professor\\
+ 2006-2008\quad\quad\;\;\:\=        Princeton
+University\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\=
+Instructor\\
+2005-2006 \>Institute for Advanced Study\> Postdoctoral Fellow
+\end{tabbing}
+
+
+
+
+
+
+%\section*{\Large\underline{Research interests}}
+
+%\medskip
+
+%\begin{tabbing}
+
+%Representation theory:\quad\quad\= Special functions and
+%orthogonal polynomials,
+%          Hecke algebras\\
+% Algebraic geometry:\> Gromov-Witten and Donaldson-Thomas
+% invariants,\\
+%         \> noncommutative geometry, projective geometry\\
+% Mathematical physics:\>
+%          Inverse scattering, integrable systems
+%\end{tabbing}
+
+\section*{\Large\underline{Grants}}
+\begin{tabbing}
+  2022-2025\qquad\quad\= NSF DMS-2200798,\quad\quad
+\quad\quad\quad\quad\quad\quad\quad\quad\quad\;\$217,038.00, sole PI\\
+ 2018-2021\qquad\quad\=NSF FRG DMS-1760373, \quad\quad\quad\quad \quad\quad\quad\quad \;  \$300,000,  for UMass\\ 
+2015-2016\qquad\quad\=NSF DMS-1546311, Workshop funding\quad\quad\quad \$25,000, sole co-PI\\
+2014-2019\qquad\quad\=NSF CAREER DMS-1352398\quad\quad\quad\quad\quad\quad\;\;\;\$420,000.00, sole PI\\
+2010-2013\qquad\quad\=NSF DMS-1001609\quad\quad
+\quad\quad\quad\quad\quad\quad\quad\quad\quad\;\;\$123,910.00, sole PI\\
+2007-2010\qquad\quad\=NSF
+DMS-0701367\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\;\;\$111,300.00, sole PI\\
+%2005-2006\> NSF Division of Mathematical Sciences Fellowship, DMS-0111298 \\
+%2003-2006\> Civilian Research and Development Foundation Grant,
+%RMI-2545-MO-03 \\
+%1997-2000\>INTAS Student Stipend and Travel grant
+\end{tabbing}
+
+\section*{\Large\underline{Awards}}
+\begin{tabbing}
+2018  \quad\quad\quad\quad\quad                  Simons Fellow in Mathematics for Fall 2018 \\
+2014-2019\quad\quad\quad NSF CAREER Award\\
+2010-2012\quad\quad\quad Sloan Fellowship\\
+2004\quad\quad\quad\quad\quad\;\= Charles and Jennifer Johnson
+Prize, MIT departmental award
+ for the best \\ \>paper submitted by a graduate student\\
+2004, 2003\> Rogers Family Prize, MIT departmental award   for the
+             best mentor-mentee\\ \>team in Summer Program for
+             Undergraduate research\\
+%1996-1997\>  Lomonosov Stipend, Moscow  State University award for
+%high academic \\ \>achievement
+\end{tabbing}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{\Large\underline{ Selected Talks}}
+
+
+
+\medskip
+
+\noindent{\it JHU, US}, Topology Seminar, 10/2023.
+
+\noindent{\it AIM, US}, Workshop on knot homology, 08/2023.
+
+\noindent{\it UC Davis, US}, Algebraic Geometry Seminar, 06/2023.
+
+\noindent{\it Stony Brook University, US}, Algebraic Geometry Seminar, 12/2022.
+
+\noindent{\it Yale University, US}, Representation Theory Seminar, 11/2022.
+
+\noindent{\it MIT, US}, Representation  Theory Seminar, 11/2023.
+
+\noindent{\it  Notre Damme University, US}, Workshop on Matrix Factorizations, 10/2023.
+
+\noindent{\it Simons Center for Geometry and Physics}, Lectures on GW/PT correspondence, 09/2023.
+
+\noindent{\it Harvard, US} Mathematical Physics Seminar, 10/2022.
+
+\noindent{\it Washington University, US} Geometry Seminar, 05/2022.
+
+\noindent{\it University of Hamburg}, Mathematical Physics Colloquium, 10/2021.
+
+\noindent{\it University of Edinburgh, UK}, Geometric Representation Theory and Lower-dimensional topology, 06/2019.
+
+\noindent{\it Schloss H\"unigen, Switzerland},  Helvetic Algebraic Geometry Seminar, 06/2019.
+
+\noindent{\it ETH, Switzerland}, Algebraic Geometry Seminar, 06/2019.
+
+\noindent{\it CalTech}, Hidden algeraic structures in topology, 04/2019.
+
+\noindent{\it Columbia University,} Informal Mathematical Physics Seminar, 10/2018.
+
+\noindent{\it ETH, Switzerland}, Algebraic Geometry Seminar, 10/2018.
+
+\noindent{\it CIME, Cetraro, Italy}, Three lectures for Summer School on Geometric Representation theory and
+Gauge Theory.
+
+\noindent{\it MSRI}, Enumerative Geometry Seminar, 04/2018.
+
+\noindent{\it UC Davis}, Geometry and  Topology Seminar, 04/2018.
+
+\noindent{\it Perimeter Institute, Canada} Mathematical Physics Seminar talk, 10/2017.
+
+\noindent{\it University ot Waterloo, Canada} Colloquium talk, 10/2017.
+
+\noindent{\it University of Hamburg, Germany} String Math, Invited speaker, 07/2017.
+
+\noindent{\it CalTech} Mathematical Physics Seminar Talk, 05/2017.
+
+\noindent{\it MIT} Representation theory Seminar Talk, 03/2017
+
+\noindent{\it Fields Institute, Canada}, One week workshop on Hall algebras and Enumerative invariants and Gauge Theory, Invited speaker, 11/2016.
+
+\noindent{\it ICTP, Trieste, Italy}, One week workshop on Gauge Theory and related fields, Invited speaker, 09/2016.
+
+\noindent{\it CRM, Montreal Canada}, One week workshop on algebraic cycles, Invited speaker, 06/2016.
+
+\noindent{\it North-Eastern University}, Algebraic Geometry Seminar Talk, 03/2016.
+
+
+\noindent{\it Texas A\&M}, Geometry and Combinatorics Seminar Talk, 10/2015.
+
+\noindent{\it IAS/Park City Mathematics Institute}, Summer School on Geometric Representation theory, Invited speaker, 06/2015
+
+\noindent{\it Stony Brook University}, One-week workshop on Knot homology at SCGP, Invited Speaker, 05/2015. 
+
+\noindent{\it Banff},  One-week workshop on topological recursion, quantum curves and quantum invariants, Invited speaker, 06/2014. 
+
+\noindent{\it North-Western University}, Conference on QFT and representation theory, Invited speaker, 05/2014.
+
+\noindent{\it University of Geneva, Switzerland}, Conference on quantum invariants and geometry, Invited speaker, 04/2014.
+
+\noindent{\it EPFL, Switzerland}, Three lectures on Geometry Seminar, 04/2014.
+
+\noindent{\it North-Western University}, Topology Seminar, 03/2014.
+
+\noindent{\it University of California, Davis}, Series of three lectures on knot invariants and algebraic geometry, 02/2014.
+
+\noindent{\it University of Maryland}, Colloquium, 04/2014.
+
+\noindent{\it Stanford University}, Algebraic Geometry Seminar, 09/2013.
+
+\noindent{\it CRM, Montreal}, Two-Week workshop, Four lectures on knot homology, DAHA and singular curves 07/2014.
+
+\noindent{\it Banff}, {One Week workshop on motivic DT invariants}, Invited speaker, 06/2013.
+
+\noindent{\it MSRI}, {Conference on noncommutative Geometry}, Invited speaker, 05/2013.
+
+\noindent{\it University of Michigan, Ann Arbor}, Lie Theory seminar, 04/2013.
+
+\noindent{\it Rutgers University}, Mathematical Physics Seminar, 12/2011.
+
+\noindent{\it University of North Carolina, Chapel Hill}, Geometry and Mathematical Physics Seminar, 12/2011
+
+\noindent{\it University of North Carolina, Chapel Hill}, Colloquium, 12/2011.
+
+\noindent{\it Oxford University, UK}, Series of Lectures on knot invariants and Hilbert scheme of points
+on curves and DAHAs, 11/2011.
+
+\noindent{\it Simons Center for Geometry and Physics}, Conference on Homological Invariants in Low dimensional 
+Topology, 06/2011.
+
+\noindent{\it Simons Center for Geometry and Physics}, Conference on Mirror Symmetry and Equivariant 
+cohomology, 05/2011.
+
+\noindent{\it University of Texas, Austin}, Geometry Seminar, 03/2011
+
+\noindent{\it University of Michigan, Ann Arbor}, Mathematical Physics Seminar, 02/2011.
+
+
+\noindent{\it Wall-crossing in Mathematics and Physics, Mathematics},
+University of Illinois at Urbana-Champaign,
+05/2010.
+
+\noindent{\it University of Illinois, Chicago}, Algebraic Geometry Seminar,
+03/2010.
+
+\noindent{\it University of Wisconsin, Madison}, Geometry Seminar, 11/2009.
+
+\noindent{\it University of Michigan, Ann Arbor}, Mathematical Physics Seminar,
+10/2009.
+
+\noindent{\it Boston University}, Geometry Seminar, 10/2009.
+
+\noindent{\it AMS Special Session on TQFT}, University of Illinois at Urbana-Champaign,
+04/2009.
+
+
+\noindent{\it University of Chicago, Chicago}, Representation Theory Seminar, 11/2009.
+
+\noindent{\it MIT}, Noncommutative Algebra Seminar, 05/2009.
+
+\noindent{\it Cornell University}, Representation Theory Seminar, 04/ 2009.
+
+
+
+\noindent{\it Stony Brook University}, Colloqium, 01/2009.
+
+\noindent{\it University of Massachusetts, Amherst}, Special seminar, 12/2008.
+
+\noindent{\it University of Texas, Austin}, Special seminar, December, 12/2008.
+
+\noindent{\it University of Illinois at Urbana-Champaign}, Algebraic geometry seminar, 12/2008.
+
+\noindent{\it University of Michigan}, Special seminar, 11/2008.
+
+
+
+
+\noindent{\it Northwestern University}, Mathematical
+Physics Seminar, 10/2007.
+
+\noindent{\it  University of California, Riverside}, Lie Theory
+Seminar, 12/2006.
+
+\noindent{\it University of Virginia, Charlottesville}, Colloqium:
+11/2006.
+
+\noindent {\it University of Virginia, Charlottesville}, Algebra
+Seminar, 11/2006.
+
+\noindent{\it University of Massachusetts, Amherst},
+Representation Theory Seminar, November, 12/2005.
+
+\noindent{\it AMS Special Session on Noncommutative Algebra and
+Noncommutative Birational Geometry}, University of Oregon,
+11/2005.
+
+
+
+\noindent{\it University of Washington}, Algebra Seminar,
+11/2005.
+
+\noindent{\it AMS Special Session on Algebraic Geometry and
+Combinatorics}, UC, Santa Barbara, 04/2005.
+
+\noindent{\it Rutgers University}, Lie Group Seminar, 10/2005.
+
+\noindent{\it University of Michigan}, Algebra Seminar, 12/2004.
+
+%\noindent{\it CalTech}, Analysis Seminar, 11/2004.
+
+\noindent{\it MIT}, Infinite-Dimensional Algebra Seminar, 04/2004.
+
+\noindent{\it Yale University}, Geometry, Symmetry and Physics,
+12/2003.
+
+\noindent{\it University of Massachusetts}, Amherst,
+Representation Theory
+          Seminar, 12/2003.
+
+\noindent {\it Cornell University}, Lie Groups Seminar, 01/2003.
+
+
+
+\noindent{\it MIT}, Infinite-Dimensional Algebra Seminar,
+11/2002.
+
+\noindent{\it University of Amsterdam}, Lectures on special
+functions, 07/2002.
+
+\medskip
+
+%\newpage
+
+\section*{ {\Large\underline{Teaching}}}
+\noindent University of Massachusetts
+\begin{tabbing}
+
+
+
+  
+Fall 2023:\quad\quad\quad\= Introduction to Complex Analyis, (Math 421)\\
+\>Taught lectures \\
+
+  
+Spring 2023:\quad\quad\= Introduction to Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+
+
+  
+Fall 2022:\quad\quad\quad\= Representation Theory, (Math 680)\\
+\>Taught lectures \\
+
+  
+Fall 2022:\quad\quad\quad\= Putnam Seminar, (Math 490)\\
+\>Taught lectures \\
+
+
+Spring 2022:\quad\quad\= Introduction to Complex Analysis, (Math 421)\\
+\>Taught lectures \\
+
+
+Fall 2021:\quad\quad\quad\= Multi-variable Calculus, (Math 233)\\
+\>Taught lectures \\
+
+  
+Spring 2021:\quad\quad\= Graduate Topology II, (Math 672)\\
+\>Taught lectures \\
+
+  
+Fall 2020:\quad\quad\quad\= Multi-variable Calculus, (Math 233)\\
+\>Taught lectures \\
+
+  
+Fall 2020:\quad\quad\quad\= Graduate Topology I, (Math 671)\\
+\>Taught lectures \\
+  
+  
+Spring 2020:\quad\quad\= Introduction to Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+
+
+  
+Spring 2019:\quad\quad\= Graduate Topology II, (Math 672)\\
+\>Taught lectures \\
+
+  
+Fall 2019:\quad\quad\quad\= Introduction to Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+
+  
+Fall 2019:\quad\quad\quad\= Graduate Topology I, (Math 671)\\
+\>Taught lectures \\
+
+
+Summer 2019:\quad\= REU program\\
+\>Mentored four students \\
+  
+  
+Spring 2019:\quad\quad\= Advanced Multi-variable calculus, (Math 425)\\
+\>Taught lectures \\
+
+
+Summer 2018:\quad\= REU program\\
+\>Mentored four students \\
+
+  
+Fall 2017:\quad\quad\quad\= Introduction to Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+
+
+Summer 2017:\quad\= REU program\\
+\>Mentored four students \\
+
+
+
+  
+Fall 2016:\quad\quad\quad\= Introduction to Topology, (Math 671)\\
+\>Taught lectures \\
+
+
+Fall 2016:\quad\quad\quad\= Introduction into Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+
+Summer 2016:\quad\= REU program\\
+\>Mentored four students \\
+
+Fall 2015:\quad\quad\quad\= Introduction to Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+
+
+Fall 2015:\quad\quad\quad\= Introduction to Representation Theory, (Math 797)\\
+\>Taught lectures \\
+
+Summer 2015:\quad\= REU program\\
+\>Mentored four students \\
+
+Spring 2015:\quad\quad\= Introduction to Linear Algebra, (Math 235)\\
+\>Taught lectures, course chair for 5 other sections of the course\\
+
+
+Fall 2014:\quad\quad\quad\= Introduction to Topology, (Math 671)\\
+\>Taught lectures \\
+
+
+Fall 2014:\quad\quad\quad\= Introduction into Linear Algebra (Honors), (Math 235H)\\
+\>Taught lectures \\
+
+
+
+Fall 2013:\quad\quad\quad\= Knot Invariants, (Math 797KI)\\
+\>Taught lectures \\
+
+
+Fall 2013:\quad\quad\quad\= Introduction into Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+
+
+Summer 2013:\quad\= REU program\\
+\>Mentored one student \\
+
+
+Fall 2012:\quad\quad\quad\= Putnam Exam, (Math 491A)\\
+\>Taught lectures \\
+
+Fall 2012:\quad\quad\quad\= Multivariable Calculus, (Math 233)\\
+\>Taught lectures \\
+
+Fall 2012:\quad\quad\quad\= Introduction into Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+
+Fall 2011:\quad\quad\quad\= Introduction into Linear Algebra, (Math 235)\\
+\>Taught lectures \\
+Fall 2010:\quad\quad\quad\= Graduate Algebra, (Math 631)\\
+\>Taught lectures \\
+Spring 2010:\quad\quad\= Calculus I, (MAT 131, 2 sections)\\
+ \>Taught lectures and problem sessions\\
+\end{tabbing}
+
+
+\noindent Princeton University:
+\begin{tabbing}
+Spring 2009:\quad\quad \=Multivariable Calculus (MAT
+201)
+\\ \>Taught  review sessions\\
+
+Spring 2009:\quad\quad \=Junior Seminar: Representation Theory of Finite Groups
+\\ \>Organize the Seminar\\
+
+
+
+Fall 2008:\quad\quad\quad \=Advanced Multivariable Calculus (MAT
+203, Course Head)
+\\ \>Taught lectures, review sessions\\
+
+
+Spring 2008:\quad\quad \= Multivariable Calculus (MAT
+201, 2 sections)
+\\ \>Taught lectures and problem sessions\\
+
+
+Fall 2007:\quad\quad\quad \=Advanced Multivariable Calculus (MAT
+203, 2 sections)
+\\ \>Taught lectures and problem sessions\\
+
+Spring 2007:\> Multivariable Calculus (MAT 201, 2 sections) \\
+\>Taught lectures
+and problem sessions\\
+
+Fall 2006:\> Advanced Multidimensional Calculus (MAT 203, 2
+sections)\\ \>Taught lectures and problem sessions \\
+\end{tabbing}
+
+\medskip \noindent MIT:
+
+\begin{tabbing}
+Summer 2004:\quad\=Summer Program in Undergraduate Research at
+                   MIT\\\>
+Mentored 2 undergraduate students \\
+Spring 2004:\>Linear Algebra (18.06)\\ \> Taught problem sessions\\
+Fall 2003:\>
+          Advanced Calculus (18.01A)\\ \>
+         Multidimensional Calculus (18.02)\\ \>
+         Taught problem sessions\\
+Summer 2004: \> Summer
+Program in Undergraduate Research at MIT\\
+\> Mentored 2 undergraduate students\\
+Spring 2003:\> Differential Equations (18.03) \\ \> Taught problem
+sessions and graded problems\\
+2001-2002:\> Graded problems for 2 graduate level courses
+\end{tabbing}
+
+\medskip
+%\newpage
+\noindent Independent University of Moscow:
+\begin{tabbing}
+1999-2001:\quad\quad\quad\=  Advanced Algebra courses\\ \> Taught
+problem sessions\\
+Spring 2000: \>Organized the seminar  on Projective Algebraic\\
+\>Geometry for undergraduate students.
+\end{tabbing}
+
+
+
+
+
+
+
+
+
+
+
+\section*{\Large \underline{Services}}
+
+\noindent {\bf External Service}:
+
+\medskip
+
+\medskip
+
+\noindent {\bf Refereeing:} Communications in Mathematical Physics, Contemporary
+Mathematics, Transformation Groups, IMRN, JAMS, Annals of Mathematics, Journal of Algebraic Combinatorics A, Advances in Mathematics, Transactions of AMS, Compositio, Journal of Algebra, Selecta, Inventiones.
+\medskip  
+
+\noindent {\bf Refereeing Grant Proposals:} NSA, Swiss National Science Foundation,
+ the Netherlands Organisation for Scientific Research, the Chilean National Science and Technology Commission,
+Newton Institute Scientific proposals, served on two NSF panels.
+
+
+\medskip
+
+\noindent{\bf Conference organization:}
+PI co-organized one-week workshop in Banff (June 2014); co-organized three-day workshop in Amherst (October 2015); co-organized
+three-day worshop in Amherst (July 2017); co-organize one-week AIM workshop (October 2018); co-organized one-week FRG workshops
+at UC Davis (June 2019), at UMass (June 2020), at University of Oregon (2022); co-organized AIM community (2021-2022),
+co-organized two-month program at Simons Center for Physics and Geometry (2023), co-organized AIM workshop (2023).
+
+\medskip
+
+\medskip
+
+\noindent {\bf Internal Service:}
+
+\medskip
+
+\noindent Princeton University:
+
+
+
+\noindent Coorganizer of Princeton Algebraic Geometry Seminar (Spring, 2009); served on six general exam committees; advised an undergraduate student on his senior thesis.
+
+
+\medskip
+
+\noindent University of Massachusetts:
+
+\noindent Coorganizer of Valley Geometry Seminar and Representation Theory Seminar (2009-), Quantum Field Theory Seminar (Fall 2010);
+gave   lectures on Algebraic Geometry Reading Seminar (Spring 2009: 5 lectures, Spring 2010: 2 lectures, Fall 2010: 2 lectures, Spring 2011: 2 lectures, Spring 2012: 2 lectures); 
+served on Colloquium Committee ( Fall 2010, Fall 2013, Spring 2014, 2016-2017); 
+Served on Advanced Graduate Algebra Exam Committee (Fall 2011-- Spring 2013); Member of Faculty Search Committee 
+(Fall 2011, Spring 2012, Fall 2012, Spring 2013, Spring 2019); Chair the Search Committee for Visiting Assistant Professor (2020, 2021)
+Undergraduate Advisor (2010-), Served on Undergraduate Affairs Committee (Fall 2017).
+
+% \noindent During the summers 2003 and 2004 PI participated Summer
+% Program in Undergraduate Research (SPUR) as a mentor of two (2003)
+% and one  undergraduate students. SPUR is a six-week program of
+% full-time research experience for MIT undergraduates, paired with
+% MIT Math graduate students as mentors, culminating in written
+% papers and lectures to faculty. Both times our teams were selected
+% as top teams.
+
+\medskip
+
+\noindent During the summer 2013 PI was supervising REU project of
+UMass for one student. During summers 2019, 2018, 2017, 2016, 2015 PI supervising
+REU projects for the teams of four students. 
+
+
+\section*{\Large \underline{Ph.D. advising}}
+
+\medskip
+
+1. My student Tom Shelly graduated in August 2016 and started his job as Visiting Assistant Professor at Mount Holyoke College. 
+
+2. My student Toby Willson graduated in December 2015 and started his job Bloomberg. 
+
+3. My current student Arthur Wang works on computation of Khovanov homology of torus links.
+
+4. My current student Pranav Kalkunte works on a problem related to motivic integration.
+
+5. My current student Chuijiao Zhang works on a  problem related to geometry of Affine Springer Fibers.
+
+%\section*{\Large \underline{References}}
+
+%\begin{tabbing}
+%Professor P. Etingof\quad\quad\quad\quad\= MIT, USA, etingof@math.mit.edu \\
+%Professor A. Okounkov\> Princeton University, USA,
+%okounkov@math.princeton.edu\\
+%Professor R. Pandharipande\>Princeton University, USA,
+%rahulp@math.princeton.edu
+%\end{tabbing}
+
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

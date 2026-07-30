@@ -1,0 +1,494 @@
+\documentclass[12pt]{amsart}%
+%
+%
+
+
+
+
+\usepackage{amsmath, amssymb, amsthm, amsfonts, bbm, dsfont}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{mathrsfs}
+
+
+\usepackage{hyperref}
+
+\usepackage{a4wide}
+
+
+
+
+
+
+
+\numberwithin{equation}{section}
+\theoremstyle{plain}
+\newtheorem{theorem}[subsubsection]{Theorem}
+ \newtheorem{lemma}[subsubsection]{Lemma}
+ \newtheorem{proposition}[subsubsection]{Proposition}
+ \newtheorem{corollary}[subsubsection]{Corollary}
+ \newtheorem{conjecture}[subsubsection]{Conjecture}
+ \newtheorem*{claim}{Claim}
+ \newtheorem*{sublemma}{Sublemma}
+ \newtheorem{aprop}[subsection]{Proposition}
+
+ \theoremstyle{definition}
+ \newtheorem{defn}[subsubsection]{Definition}
+ \newtheorem{cons}[subsubsection]{Construction}
+
+\newtheorem{remark}[subsubsection]{Remark}
+\newtheorem{exam}[subsubsection]{Example}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% End of the header  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+\usepackage{pictexwd}
+\usepackage{stackengine}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{dsfont}
+
+\usepackage{mathabx}
+
+%\input{/Applications/TeX/MyHeaders/StdDefs.tex}
+%\input{StdDefs.txt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Standard definitions %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%% mathrm %%%%%%%
+
+\newcommand{\rmL}{\mathrm{L}}
+\newcommand{\rmT}{\mathrm{T}}
+
+
+%%%%%%%%% mathbb %%%%%%%%
+
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\cc}{\mathbb{C}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\oo}{\mathbb{O}}
+\newcommand{\ii}{\mathbb{I}}
+
+
+%%%%%%%%%mathsf %%%%%%%
+\newcommand{\sfZ}{\mathsf{Z}}
+
+%%%%%%%%% mathscr %%%%%%%%
+\newcommand{\scZ}{\mathscr{Z}}
+\newcommand{\scC}{\mathscr{C}}
+\newcommand{\scX}{\mathscr{X}}
+
+%%%%%%%%%% mathbf %%%%%%%%%%
+\newcommand{\bfa}{\mathbf{a}}
+
+%%%%%%%%% mathcal %%%%%%%%%%
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calc}{\mathcal{C}}
+\newcommand{\cf}{\mathcal{F}}
+\newcommand{\calG}{\mathcal{G}}
+\newcommand{\cg}{\mathcal{G}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calP}{\mathscr{P}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calD}{\mathcal{D}}
+
+
+%%%%%%%%%% mathfrak %%%%%%%%%%
+\newcommand{\fra}{\mathfrak{a}}
+\newcommand{\frg}{\mathfrak{g}}
+\newcommand{\frp}{\mathfrak{p}}
+\newcommand{\frt}{\mathfrak{t}}
+\newcommand{\frb}{\mathfrak{b}}
+\newcommand{\frc}{\mathfrak{c}}
+\newcommand{\frl}{\mathfrak{l}}
+\newcommand{\frs}{\mathfrak{s}}
+\newcommand{\frz}{\mathfrak{z}}
+\newcommand{\frA}{\mathfrak{A}}
+\newcommand{\frF}{\mathfrak{F}}
+\newcommand{\frI}{\mathfrak{I}}
+\newcommand\frT{\mathfrak{T}}
+\newcommand{\frn}{\mathfrak{n}}
+
+\newcommand{\bfra}{\overline{\mathfrak{a}}}
+
+%%%%%%%% tilde %%%%%%%%%
+\newcommand{\tilA}{\widetilde{A}}
+\newcommand{\tilL}{\widetilde{L}}
+\newcommand{\tilW}{\widetilde{W}}
+\newcommand{\tilS}{\widetilde{S}}
+\newcommand{\tilT}{\widetilde{T}}
+\newcommand{\tilw}{\widetilde{w}}
+\newcommand{\tila}{\widetilde{a}}
+\newcommand{\tilc}{\widetilde{c}}
+\newcommand{\tilh}{\widetilde{h}}
+\newcommand{\tilm}{\widetilde{m}}
+\newcommand{\tilU}{\widetilde{U}}
+\newcommand{\tilV}{\widetilde{V}}
+\newcommand{\tilJ}{\widetilde{J}}
+\newcommand{\tilX}{\widetilde{X}}
+\newcommand{\tilP}{\widetilde{P}}
+\newcommand{\tilG}{\widetilde{G}}
+\newcommand{\tilom}{\widetilde{\omega}}
+\newcommand{\tilDD}{\widetilde{\DD}}
+\newcommand{\tq}{\widetilde{q}}
+\newcommand{\tSp}{\widetilde{\textup{Sp}}}
+
+%%%%%%%% hat %%%%%%%%%
+
+
+\newcommand{\hatT}{\widehat{T}}
+
+
+%%%%%%%% check %%%%%%%%
+
+%%%%%% bar %%%%%%%%%
+\newcommand{\bclC}{\bar{\mathcal{C}}}
+\newcommand{\bW}{\bar{W}}
+
+
+
+%%%%%%%% standard operators %%%%%%%%
+
+\newcommand{\supp}{\textup{supp}}
+\newcommand\act{\textup{act}}
+\newcommand\aff{\textup{aff}}
+\newcommand\Av{\textup{Av}}
+\newcommand\av{\textup{av}}
+\newcommand{\can}{\textup{can}}
+\newcommand{\codim}{\textup{codim}}
+\newcommand{\coker}{\textup{coker}}
+\newcommand\ev{\textup{ev}}
+\newcommand{\Fil}{\textup{Fil}}
+\newcommand\Frob{\textup{Frob}}
+\newcommand\Gal{\textup{Gal}}
+\newcommand\geom{\textup{geom}}
+\newcommand{\Gr}{\textup{Gr}}
+\newcommand{\gr}{\textup{gr}}
+\newcommand\id{\textup{id}}
+\newcommand\Image{\textup{Im}}
+\newcommand{\Ind}{\textup{Ind}}
+\newcommand{\ind}{\textup{ind}}
+\newcommand\inv{\textup{inv}}
+\newcommand\Irr{\textup{Irr}}
+\newcommand\Jac{\textup{Jac}}
+\newcommand\lcm{\textup{lcm}}
+\newcommand\leng{\textup{leng}}
+\newcommand\Lie{\textup{Lie}\ }
+\newcommand\loc{\textup{loc}}
+\newcommand\Loc{\textup{Loc}}
+\newcommand\Mod{\textup{Mod}}
+\newcommand\nil{\textup{nil}}
+\newcommand{\Nm}{\textup{Nm}}
+\newcommand\Out{\textup{Out}}
+\newcommand\Perv{\textup{Perv}}
+\newcommand{\Pic}{\textup{Pic}}
+\newcommand\rank{\textup{rank}\ }
+\newcommand{\red}{\textup{red}}
+\newcommand{\reg}{\textup{reg}}
+\newcommand{\Reg}{\textup{Reg}}
+\newcommand\Rep{\textup{Rep}}
+\newcommand{\Res}{\textup{Res}}
+\newcommand\res{\textup{res}}
+\newcommand\rk{\textup{rk}}
+\newcommand\rs{\textup{rs}}
+\newcommand\sep{\textup{sep}}
+\newcommand\Span{\textup{Span}}
+\newcommand\Spec{\textup{Spec}\ }
+\newcommand\St{\textup{St}}
+\newcommand\st{\textup{st}}
+\newcommand\Supp{\textup{Supp}}
+\newcommand\Sym{\textup{Sym}}
+\newcommand{\tors}{\textup{tors}}
+\newcommand{\Tot}{\textup{Tot}}
+\newcommand{\Tr}{\textup{Tr}}
+\newcommand{\tr}{\textup{tr}}
+\newcommand\triv{\textup{triv}}
+\newcommand\unip{\textup{unip}}
+\newcommand{\univ}{\textup{univ}}
+\newcommand{\val}{\textup{val}}
+\newcommand{\vol}{\textup{vol}}
+\newcommand{\Coh}{\textup{Coh}}
+
+
+\newcommand\Aut{\textup{Aut}}
+\newcommand\Hom{\textup{Hom}}
+\newcommand\End{\textup{End}}
+\newcommand\Mor{\textup{Mor}}
+\newcommand\uAut{\underline{\Aut}}
+\newcommand\uHom{\underline{\Hom}}
+\newcommand\uEnd{\underline{\End}}
+\newcommand\uMor{\underline{\Mor}}
+\newcommand{\RHom}{\mathrm{RHom}}
+\newcommand\RuHom{\bR\uHom}
+\newcommand{\Ext}{\textup{Ext}}
+\newcommand{\uExt}{\underline{\Ext}}
+\newcommand{\DG}{\mathrm{DG}}
+\newcommand{\HHH}{\mathrm{HHH}}
+
+
+%%%%%%%% Lie groups and algebras %%%%%%%
+\newcommand\GL{\textup{GL}}
+\newcommand\gl{\mathfrak{gl}}
+\newcommand\PGL{\textup{PGL}}
+\newcommand\Ug{\textup{U}}
+\newcommand\ug{\mathfrak{u}}
+\newcommand\SL{\textup{SL}}
+\def\sl{\mathfrak{sl}}
+\newcommand\SU{\textup{SU}}
+\newcommand\su{\mathfrak{su}}
+\newcommand\GU{\textup{GU}}
+\newcommand\SO{\textup{SO}}
+\newcommand\so{\mathfrak{so}}
+\newcommand\Sp{\textup{Sp}}
+\def\sp{\mathfrak{sp}}
+\newcommand\GSp{\textup{GSp}}
+
+
+\newcommand{\ad}{\textup{ad}}
+\newcommand{\Ad}{\textup{Ad}}
+\def\sc{\textup{sc}}
+\newcommand{\der}{\textup{der}}
+
+\newcommand\xch{\mathbb{X}^*}
+\newcommand\xcoch{\mathbb{X}_*}
+
+
+%%%%%%% common symbols %%%%%%%%
+
+\newcommand{\bl}{\bullet}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand\incl{\hookrightarrow}
+\newcommand\surj{\twoheadrightarrow}
+\newcommand\bij{\leftrightarrow}
+\newcommand{\isom}{\stackrel{\sim}{\to}}
+\newcommand{\quash}[1]{}
+\newcommand{\leftexp}[2]{{\vphantom{#2}}^{#1}{#2}}
+\newcommand{\trpose[1]}{\leftexp{t}{#1}}
+\newcommand{\const}[1]{\overline{\QQ}_{\ell,#1}}
+\newcommand{\twtimes}[1]{\stackrel{#1}{\times}}
+\newcommand{\Ltimes}{\stackrel{\LL}{\otimes}}
+\newcommand{\jiao}[1]{\langle{#1}\rangle}
+\newcommand{\nth}{^\textup{th}}
+\newcommand{\pt}{\mathsf{p}}
+\newcommand{\Ch}{\textup{Ch}}
+\newcommand{\KM}{\textup{KM}}  % Kac-Moody
+\newcommand{\wt}{\widetilde}
+\newcommand{\wh}{\widehat}
+\newcommand{\ep}{\epsilon}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\etale}{\textup{\'et}}
+\newcommand{\sm}{\textup{sm}}
+\newcommand{\oll}[1]{\overleftarrow{#1}}
+\newcommand{\orr}[1]{\overrightarrow{#1}}
+\newcommand{\olr}[1]{\overleftrightarrow{#1}}
+\newcommand\mat[4]{\left(\begin{array}{cc} #1 & #2 \\ #3 & #4 \end{array}\right)}  % 2-by-2 matrix
+\newcommand{\und}[1]{\underline{#1}}
+
+%%%%%%%%%%%%%% algebras %%%%%%%%%%%
+
+\newcommand{\Br}{\mathfrak{Br}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% End of standard definitions %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,fit,intersections}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{patterns}
+\usetikzlibrary{matrix,arrows}
+%\usetikzlibrary{cd}
+\usepgflibrary{decorations.pathmorphing}
+
+%\input{tikzstyledefs.tex}
+
+\usepackage{tikz-cd}
+
+
+
+\newcommand{\Wr}{\overline{W}}
+\newcommand{\Hilb}{\textup{Hilb}}
+\newcommand{\bHilb}{\mathbf{\textup{Hilb}}}
+\newcommand{\eMFn}{\mathrm{MF}^{sc}_{B_n^2}}
+\newcommand{\MF}{\mathrm{MF}}
+\newcommand{\calXr}{\overline{\mathcal{X}}}
+\newcommand{\calX}{\mathcal{X}}
+%\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\MFs}{\mathrm{MF}}
+\newcommand{\calZ}{\mathcal{Z}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calY}{\mathcal{Y}}
+%\newcommand{\calX}{\mathcal{X}}
+\newcommand{\cox}{\mathrm{cox}}
+
+
+%%%%%%%%%%% Spaces %%%%%%%%%%%%%%
+
+%\newcommand{\pt}{\mathsf{p}}
+
+\newcommand{\FHilb}{\mathrm{FHilb}}
+\newcommand{\Fl}{\mathrm{Fl}}
+%%%%%%%%%%%%%%%%% Algebras %%%%%%%%
+\newcommand{\frh}{\mathfrak{h}}
+\newcommand{\Lks}{\mathfrak{L}}
+\newcommand{\bcls}{\mathfrak{cl}}
+
+%%%%%%%%%%%%%%%%% Homology %%%%%%%%%
+\newcommand{\CE}{\mathrm{CE}}
+\newcommand{\ChE}{Chevalley-Eilenberg}
+
+
+%%%%%%% Operations%%%%%%%%%%%
+\newcommand{\odel}{\stackon{$\otimes$}{$\scriptstyle\Delta$}}
+\newcommand{\bst}{\bar{\star}}
+
+%%%%%%%%% Maps  %%%%%%%%%%%%%%
+\newcommand{\forg}{\mathrm{fgt}}
+%\newcommand{\ind}{\mathrm{ind}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% Groups %%%%%%%
+
+\newcommand{\Tqt}{\mathbb{T}_{q,t}}
+
+%%%%%%%%%%%%%%%% Categories and related %%%%%%%%%%%%%%%%%
+\newcommand{\thc}{\dddot{\mathrm{Cat}}}
+\newcommand{\thcs}{\thc_{sym}}
+\newcommand{\ob}{\mathrm{Obj}}
+\newcommand{\oct}{\mathrm{Cat}}
+\newcommand{\twc}{\ddot{\textup{Cat}}}
+\newcommand{\thcm}{\thc_{man}}
+%\newcommand{\MF}{\textup{MF}}
+\newcommand{\bCat}{\mathbf{Cat}}
+\newcommand{\CH}{\mathsf{CH}}
+\newcommand{\Dr}{\mathrm{Dr}}
+\newcommand{\HC}{\mathrm{HC}}
+\newcommand{\KN}{\mathrm{KN}}
+\newcommand{\HHom}{\mathbb{H}\mathrm{om}}
+\newcommand{\Sbim}{\mathbb{S}\mathrm{bim}}
+\newcommand{\bim}{\mathbb{B}\mathrm{im}}
+
+%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\cnct}{concatenation}
+\newcommand{\mcnct}{\bigvarstar}
+\newcommand{\maff}{\mathrm{aff}}
+\newcommand{\Braff}{\Br^{\maff}}
+\newcommand{\Braffn}{ \Braff_n }
+\def\Braffnv#1{ \Braff_{n_{#1}}}
+\newcommand{\Brn}{\Br_n}
+\def\Brnv#1{ \Br_{n_{#1}}}
+\def\Hilb{ \mathrm{Hilb}}
+
+%%%%%%%%%% Matrix Factorizations %%%%%%%
+\newcommand{\MFGBB}{\mathrm{MF}_{G\times B\times B}(\mathcal{X},W)}
+\newcommand{\MFB}{\mathrm{MF}_B(\widetilde{\Hilb^{free}},0)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% operations %%%%%%
+
+\newcommand{\ti}{\times}
+\newcommand{\oti}{\otimes}
+
+%%%%%%%%%%%%%%%%%%%%%% Long words %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\tft}{TQFT }
+\newcommand{\Def}{Def}
+
+%%%%%%%%%%%%%%%%%%%
+
+\title{Problems on Quadratic forms}
+\author{Alexei Oblomkov}
+\begin{document}
+\maketitle
+
+The quadratic form is a homogeneous function of degree \(2\). That is function on \(\RR^n\):
+\[Q(\vec{x})=\sum_{i=1}^n\sum_{j=1}^n a_{ij}x_jx_j,\quad \vec{x}\in \RR^n.\]
+
+{\bf Theorem} There is a linear change of variables
+\[y_i=\sum_{j=1}^nb_{ij}x_j, \quad 1\le i\le n,\]
+such that
+\[Q(\vec{y})=\sum_{i=1}^n\epsilon_i y_i^2\]
+where \(\epsilon_i\) is either \(0\) or \(1\) or \(-1\).
+The sequence of \(\epsilon_i\) is called the {\it signature of the quadratic form}.
+We also call the change of variables in the theorem {\it simplifying change of variables.} 
+
+For  example if
+\[Q(y_1,y_2,y_3,y_4)=y_1^2-y_3^2+y_4^2,\]
+then the corresponding quadratic form has signature \((+,0,-,+)\).
+The change of variables in the theorem is not unique but the signature of the quadratic form is
+unique! That is the number of \(0\), \(+\) and \(-\) does not depend on the change of variables
+you choose.
+
+In class we discussed a method for finding a linear change of variables from the theorem.
+The  problems below give chance to practice this method and derive some conclusions about
+the quadratic forms.
+
+
+{\bf Problem 1}. Find a simplifying change of variables and the signature for the quadratic form:
+\[Q(x_1,x_2)=4x_1^2-4x_1x_2+5x_2^2.\]
+The point \((0,0)\) is the critical point of \(Q\), is it maximum, minimum or neither?
+
+
+
+
+{\bf Problem 2}. Find a simplifying change of variables and the signature for the quadratic form:
+\[Q(x_1,x_2)=x_1^2+2x_1x_2-20x_2^2.\]
+The point \((0,0)\) is the critical point of \(Q\), is it maximum, minimum or neither?
+
+
+
+
+{\bf Problem 4}. Find a simplifying change of variables and the signature for the quadratic form:
+\[Q(x_1,x_2,x_3)=2x_1^2-x_1x_2+2x_2^2-x_2x_3+2x_3^2.\]
+The point \((0,0,0)\) is the critical point of \(Q\), is it maximum, minimum or neither?
+
+
+
+
+{\bf Problem 5}. Find a simplifying change of variables and the signature for the quadratic form:
+\[Q(x_1,x_2,x_3,x_4)=x_1^2-4x_1x_2+5x_2^2+x_3^2+x_3x_4-16x_4^2.\]
+The point \((0,0,0,0)\) is the critical point of \(Q\), is it maximum, minimum or neither?
+
+
+\end{document}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -120,6 +120,34 @@
     ul.students .title { font-style: italic; }
     ul.students .meta { color: var(--muted); font-size: .9rem; }
     .subhead { font-weight: 700; margin: 1.5rem 0 .5rem; }
+    .abs-toggle {
+      display: block;
+      margin: .3rem 0 0;
+      font: inherit;
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      color: var(--muted);
+    }
+    .abs-toggle:hover { color: var(--accent); }
+    .abs-toggle::before { content: "\25B8\00a0"; display: inline-block; }
+    .abs-toggle[aria-expanded="true"]::before { transform: none; content: "\25BE\00a0"; }
+    .abstract {
+      margin: .5rem 0 .25rem;
+      padding: .75rem .9rem;
+      background: #faf9f7;
+      border-left: 3px solid var(--line);
+      border-radius: 0 6px 6px 0;
+      font-size: .93rem;
+      color: #333;
+      text-align: justify;
+    }
+    .abstract[hidden] { display: none; }
     .source-note { color: var(--muted); font-size: .85rem; margin-top: 1.5rem; }
   </style>
 </head>
@@ -158,95 +186,189 @@
   <section class="panel" id="research" role="tabpanel">
     <h2>Papers and preprints</h2>
     <ol class="papers">
+      <li><a href="https://arxiv.org/abs/2607.05624">Wall-crossing for Hilbert schemes</a> (with I. Cavey, E. Gorsky, J. Turner).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>The goal of the minimal model program for the Hilbert scheme of points on a surface aims is to describe the (stable) base loci of all divisors, their associated birational models, and the maps between them. We answer all of these questions for the Hilbert scheme of points on the blowup of the affine plane at the origin. The birational models are Brill-Noether loci in a larger Hilbert scheme, and nested variants thereof, and the wall-crossing maps are described as explicit projections. We also establish several new facts about the homogeneous coordinate ring of this Hilbert scheme, including finding the minimal set of line bundles whose sections generate the ring.</div>
+
       <li><a href="https://arxiv.org/abs/2510.13039">A categorification of representations of $U_q(\mathfrak{gl}_{1|1})$</a> (with L. Rozansky).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We categorify the action of $U_q(\mathfrak{gl}_{1|1})$ on the tensor product of its vector representations $(\mathbb{C}^{1|1})^{\otimes N}$. The generators $E$ and $F$ are represented by Fourier-Mukai functors between the derived categories of coherent sheaves on the total spaces of &quot;semi-parabolic&quot; vector bundles over the Grassmannians $Gr(k,N)$.</div>
 
       <li><a href="https://arxiv.org/abs/2510.07420">Newton-Okounkov bodies for nested Hilbert schemes</a> (with I. Cavey, E. Gorsky, J. Turner).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We study sections of line bundles on the nested Hilbert scheme of points on the affine plane. We describe the spaces of sections in terms of certain ideals introduced by Haiman, and find explicit bases for them by analyzing the trailing terms in some monomial order. As a consequence, we compute the Newton-Okounkov bodies for nested Hilbert schemes.</div>
 
       <li><a href="https://arxiv.org/abs/2503.18449">Discriminants and motivic integration</a> (with O. Kivinen, G. Wyss).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We study invariants of a plane cuve singularity $(f,0)$ coming from motivic integration on symmetric powers of a formal deformation of $f$. We show that a natural discriminant integral recovers the motivic classes of the principal Hilbert schemes of points on $f$, while the orbifold integral gives the plethystic exponential of the motivic Igusa zeta function of $f$. The latter result also holds in higher dimemsions. Combined with results of Gorsky and Némethi we obtain an interpretation of the discriminant integrals in terms of knot Floer homology, which is reminiscent of the relation between the cohomology of contact loci and fixed point Floer homology proven by de la Bodega and Poza.</div>
 
       <li><a href="https://arxiv.org/abs/2308.14692">Fixed loci of symplectic automorphisms of $K3^{[n]}$ and $n$-Kummer type manifolds</a> (with L. Kamenova, G. Mongardi).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>The aim of this paper is to give an explicit description of the fixed loci of symplectic automorphisms for certain hyperkahler manifolds, namely for Hilbert schemes on K3 surfaces and for generalized Kummer varieties. Here we extend our previous results from the case of involutions to more general groups. In particular, under some conditions on the dimension, we give the full answer for finite group actions of symplectic automorphisms coming from K3 surfaces. We prove that the all irreducible components of the fixed loci are of $K3^{[k]}$ type of lower dimensions or isolated points.</div>
 
       <li><a href="https://arxiv.org/abs/2212.02665">Matrix factorizations and $gl(m|k)$-quantum invariants</a> (with L. Rozansky).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>In our previous papers we used the Hilbert scheme of points on $C^2$ in order to construct a triply graded link homology and its $gl(m)$ version. Here we extend the $gl(m)$ construction to super-algebras $gl(m|k)$.</div>
 
       <li><a href="https://arxiv.org/abs/2210.12569">Generic curves and non-coprime Catalans</a> (with E. Gorsky, M. Mazin). <span class="ref">Algebraic Geometry (2026).</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We compute the Poincaré polynomials of the compactified Jacobians for plane curve singularities with Puiseaux exponents $(nd,md,md+1)$, and relate them to the combinatorics of $q,t$-Catalan numbers in the non-coprime case. We also confirm a conjecture of Cherednik and Danilenko for such curves.</div>
 
       <li><a href="https://arxiv.org/abs/2204.00303">The affine Springer fiber - sheaf correspondence</a> (with E. Gorsky, O. Kivinen). <span class="ref">Advances in Mathematics, vol. 464 (2025).</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>Given a semisimple element in the loop Lie algebra of a reductive group, we construct a quasi-coherent sheaf on a partial resolution of the trigonometric commuting variety of the Langlands dual group. The construction uses affine Springer theory and can be thought of as an incarnation of 3d mirror symmetry. For the group $GL_n$, the corresponding partial resolution is $\mathrm{Hilb}^n(\mathbb{C}^\times\times \mathbb{C})$. We also consider a quantization of this construction for homogeneous elements.</div>
 
       <li><a href="https://arxiv.org/abs/2008.12514">Stationary Virasoro constraints for stable pairs on toric varieties</a> (with M. Moreira, A. Okounkov, R. Pandharipande). <span class="ref">Forum Math. Pi 10 (2022), Paper No. e20, 62 pp.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>Using new explicit formulas for the stationary GW/PT descendent correspondence for nonsingular projective toric 3-folds, we show that the correspondence intertwines the Virasoro constraints in Gromov-Witten theory for stable maps with the Virasoro constraints for stable pairs. Since the Virasoro constraints in Gromov-Witten theory are known to hold in the toric case, we establish the stationary Virasoro constraints for the theory of stable pairs on toric 3-folds. As a consequence, new Virasoro constraints for tautological integrals over Hilbert schemes of points on surfaces are also obtained.</div>
 
       <li><a href="https://arxiv.org/abs/1910.02037">A compactification of the moduli space of marked vertical lines in $\mathbb{C}^2$</a> (with N. Bottman).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>For $r \geq 1$ and $\mathbf{n} \in \mathbb{Z}_{\geq0}^r\setminus\{\mathbf{0}\}$, we construct a proper complex variety $\overline{2M}_{\mathbf{n}}$. $\overline{2M}_{\mathbf{n}}$ is locally toric, and it is equipped with a forgetful map $\overline{2M}_{\mathbf{n}} \to \overline M_{0,r+1}$. This space is a compactification of $2M_{\mathbf{n}}$, the configuration space of marked vertical lines in $\mathbb{C}^2$ up to translations and dilations. In the appendices, we give several examples and show how the stratification of $\overline{2M}_{\mathbf{n}}$ can be used to recursively compute its virtual Poincaré polynomial.</div>
 
       <li><a href="https://arxiv.org/abs/1905.06511">Dualizable link homology</a> (with L. Rozansky).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We modify our previous construction of link homology in order to include a natural duality functor $\mathfrak{F}$. To a link $L$ we associate a triply-graded module $HXY(L)$ over the graded polynomial ring $R(L)=\mathbb{C}[x_1,y_1,\dots,x_\ell,y_\ell]$. The module has an involution $\mathfrak{F}$ that intertwines the Fourier transform on $R(L)$, $\mathfrak{F}(x_i)=y_i$, $\mathfrak{F}(y_i)=x_i$. In the case when $\ell=1$ the module is free over $R(L)$ and specialization to $x=y=0$ matches with the triply-graded knot homology previously constructed by the authors. Thus we show that the corresponding super-polynomial satisfies the categorical version of $q\to 1/q$ symmetry. We also construct an isotopy invariant of the closure of a dichromatic braid and relate this invariant to $HXY(L)$.</div>
 
       <li><a href="https://arxiv.org/abs/1901.04052">Notes on matrix factorizations and knot homology</a>. <span class="ref">Lecture Notes in Math. 2248, Fond. CIME/CIME Found. Subser., Springer, Cham, 2019, 83&ndash;127.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>These are the notes of the lectures delivered by the author at CIME in June 2018. The main purpose of the notes is to provide an overview of the techniques used in the construction of the triply graded link homology. The homology is space of global sections of a particular sheaf on the Hilbert scheme of points on the plane. Our construction relies on existence on the natural push-forward functor for the equivariant matrix factorizations, we explain the subtleties on the construction in these notes. We also outline a proof of the Markov moves for our homology as well as some explicit localization formulas for knot homology of a large class of links.</div>
 
       <li><a href="https://arxiv.org/abs/1901.03014">EGL formula for DT/PT theory of local curves</a>.
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>In this note we prove an integral formula for the bare one-leg PT vertex with descendents. The formula follows from the PT version of Ellingsrud-Göttsche-Lehn formula that is explained here. We apply the integral formula to obtain an elementary proof of rationality of one-leg capped PT vertex with descendents. We also obtain an integral formula for degree zero DT invariants with descendents. Finally we propose an explicit non-equivariant DT/PT correspondence as well as one descendent insertion fully-equivariant DT/PT formula.</div>
 
       <li><a href="https://arxiv.org/abs/1812.06340">3D TQFT and HOMFLYPT homology</a> (with L. Rozansky). <span class="ref">Lett. Math. Phys. 113 (2023), no. 3, Paper No. 71, 62 pp.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We describe a family of 3d topological B-models whose target spaces are Hilbert schemes of points in $\mathbb{C}^2$. The interfaces separating theories with different numbers of points correspond to braid strands. The Hilbert space of the picture of a closed braid is the HOMFLY-PT homology of the corresponding link.</div>
 
       <li><a href="https://arxiv.org/abs/1811.03257">Categorical Chern character and braid groups</a> (with L. Rozansky). <span class="ref">Adv. Math. 437 (2024), 66 pp.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>To a braid $β\in Br_n$ we associate a complex of sheaves $S_β$ on $Hilb_n(C^2)$ such that the previously defined triply graded link homology of the closure $L(β)$ is isomorphic to the homology of $S_β$. The construction of $S_β$ relies on the Chern functor $CH: MF_n^{st}\to D^{per}_{C^*\times C^*}(Hilb_n(C^2))$ defined in the paper together with its adjoint functor $HC$. We prove a formula for the closure of sufficiently positive elements of the Jucys-Murphy algebra previously conjectured by Gorsky, Negut and Rasmussen.</div>
 
       <li><a href="https://arxiv.org/abs/1809.02810">Symplectic involutions of $K3^{[n]}$ type and Kummer $n$ type manifolds</a> (with L. Kamenova, G. Mongardi). <span class="ref">Bull. Lond. Math. Soc. 54 (2022), no. 3, 894&ndash;909.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>In this paper we describe the fixed locus of a symplectic involution on a hyperkähler manifold of type $K3^{[n]}$ or of Kummer $n$ type. We prove that the fixed locus consists of finitely many copies of Hilbert schemes of $K3$ surfaces of lower dimensions and isolated fixed points.</div>
 
       <li><a href="https://arxiv.org/abs/1806.00714">GW/PT descendent correspondence via vertex operators</a> (with A. Okounkov, R. Pandharipande). <span class="ref">Comm. Math. Phys., 2019.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We propose an explicit formula for the GW/PT descendent correspondence in the stationary case for nonsingular projective 3-folds. The formula, written in terms of vertex operators, is found by studying the 1-leg geometry. We prove the proposal for all nonsingular projective toric 3-folds. An application to the Virasoro constraints for the stationary descendent theory of stable pairs will appear in a sequel.</div>
 
       <li><a href="https://arxiv.org/abs/1801.09033">Affine Schubert calculus and double coinvariants</a> (with E. Carlsson).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We define an action of the double coinvariant algebra $DR_n$ on the equivariant Borel-Moore homology of the affine flag variety $\widetilde{Fl}_n$ in type $A$, which has an explicit form in terms of the left and right action of the (extended) affine Weyl group and multiplication by Chern classes. Up to first order in the augmentation ideal, we show that it coincides with the action of the Cherednik algebra on the equivariant homology of the homogeneous affine Springer fiber $\widetilde{S}_{n,n+1} \subset \widetilde{Fl}_n$ due to Yun and the second author, and therefore preserves the non-equivariant Borel-Moore homology groups $H_*(\widetilde{S}_{n,n+1})\hookrightarrow H_*(\widetilde{Fl}_n)$. We then define a geometric filtration $F_{a} H_*(\widetilde{S}_{n,n+1})=H_*(\widetilde{S}(a))$ by closed subspaces $\widetilde{S}(a)\subset \widetilde{S}_{n,n+1}$, which we prove recovers the Garsia-Stanton descent order on $DR_n$. We use this to deduce an explicit monomial basis of $DR_n$, as well as an independent proof of the (non-compositional) Shuffle Theorem.</div>
 
       <li><a href="https://arxiv.org/abs/1801.06201">A categorification of a cyclotomic Hecke algebra</a> (with L. Rozansky).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We propose a categorification of the cyclotomic Hecke algebra in terms of the equivariant K-theory of the framed matrix factorizations. The construction generalizes the earlier construction of the authors for a categorification of the finite Hecke algebra of type A. We also explain why our construction provides a faithful realization of the Hecke algebras and discuss a geometric realization of the Jucys-Murphy subalgebra.</div>
 
       <li><a href="https://arxiv.org/abs/1710.05391">The cohomology ring of certain compactified Jacobians</a> (with Z. Yun).
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We provide an explicit presentation of the equivariant cohomology ring of the compactified Jacobian $J_{q/p}$ of the rational curve $C_{q/p}$ with planar equation $x^{q}=y^{p}$ for $(p,q)=1$. We also prove analogous results for the closely related affine Springer fiber $Sp_{q/p}$ in the affine flag variety of $SL_{p}$. We show that the perverse filtration on the cohomology of $J_{q/p}$ is multiplicative, and the associated graded ring under the perverse filtration is a degeneration of the ring of functions on a moduli space of maps $\mathbb{P}^{1}\to C_{q/p}$. We also propose several conjectures about $J_{q/p}$ and more general compactified Jacobians.</div>
 
       <li><a href="https://arxiv.org/abs/1706.00124">HOMFLYPT homology of Coxeter links</a> (with L. Rozansky). <span class="ref">Transform. Groups 28 (2023), no. 3, 1245&ndash;1275.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>A Coxeter link is a closure of a product of two braids, one being a quasi-Coxeter element and the other being a product of partial full twists. This class of links includes torus knots \(T_{n,k}\) and torus links \(T_{n,nk}\). We identify the knot homology of a Coxeter link with the space of sections of a particular line bundle on a natural generalization of the punctual locus inside the flag Hilbert scheme of points in \(\mathbb{C}^2\).</div>
 
       <li><a href="https://arxiv.org/abs/1702.03569">Affine Braid group, JM elements and knot homology</a> (with L. Rozansky). <span class="ref">Transform. Groups 24 (2019), no. 2, 531&ndash;544.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>In this paper we construct a homomorphism of the affine braid group $Br_n^{aff}$ in the convolution algebra of the equivariant matrix factorizations on the space $\overline{\mathcal{X}}_2=\mathfrak{b}_n\times GL_n\times\mathfrak{n}_n$ considered in the earlier paper of the authors. We explain that the pull-back on the stable part of the space $\overline{\mathcal{X}_2}$ intertwines with the natural homomorphism from the affine braid group $Br_n^{aff}$ to the finite braid group $Br_n$. This observation allows us derive a relation between the knot homology of the closure of $β\in Br_n$ and the knot homology of the closure of $β\cdotδ$ where $δ$ is a product of the JM elements in $Br_n$</div>
 
       <li><a href="https://arxiv.org/abs/1608.03227">Knot Homology and sheaves on the Hilbert scheme of points on the plane</a> (with L. Rozansky). <span class="ref">Selecta Math. (N.S.) 24 (2018), no. 3, 2351&ndash;2454.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>For each braid $β\in Br_n$ we construct a $2$-periodic complex $\mathbb{S}_β$ of quasi-coherent $\mathbb{C}^*\times \mathbb{C}^*$-equivariant sheaves on the non-commutative nested Hilbert scheme $Hilb_{1,n}^{free}$. We show that the triply graded vector space of the hypecohomology $ \mathbb{H}( \mathbb{S}_β\otimes \wedge^\bullet (\mathcal{B}))$ with $\mathcal{B}$ being tautological vector bundle, is an isotopy invariant of the knot obtained by the closure of $β$. We also show that the support of cohomology of the complex $\mathbb{S}_β$ is supported on the ordinary nested Hilbert scheme $Hilb_{1,n}\subset Hilb_{1,n}^{free}$, that allows us to relate the triply graded knot homology to the sheaves on $Hilb_{1,n}$.</div>
 
       <li><a href="https://arxiv.org/abs/1510.01795">Lectures on knot homology</a> (with S. Nawata). <span class="ref">Contemp. Math. 680, Amer. Math. Soc., Providence, RI, 2016, 137&ndash;177.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We provide various formulations of knot homology that are predicted by string dualities. In addition, we also explain the rich algebraic structure of knot homology which can be understood in terms of geometric representation theory in these formulations. These notes are based on lectures in the workshop &quot;Physics and Mathematics of Link Homology&quot; at Centre de Recherches Mathematiques, Universite de Montreal.</div>
 
       <li><a href="https://arxiv.org/abs/1407.5685">Geometric representations of graded and rational Cherednik algebras</a> (with Z. Yun). <span class="ref">Adv. Math. 292 (2016), 601&ndash;706.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We provide geometric constructions of modules over the graded Cherednik algebra $\mathfrak{H}^{gr}_ν$ and the rational Cherednik algebra $\mathfrak{H}^{rat}_ν$ attached to a simple algebraic group $\mathbb{G}$ together with a pinned automorphism $θ$. These modules are realized on the cohomology of affine Springer fibers (of finite type) that admit $\mathbb{C}^*$-actions. In the rational Cherednik algebra case, the standard grading on these modules is derived from the perverse filtration on the cohomology of affine Springer fibers coming from its global analog: Hitchin fibers. When $θ$ is trivial, we show that our construction gives the irreducible finite-dimensional spherical modules $\mathfrak{L}_ν(triv)$ of $\mathfrak{H}^{gr}_ν$ and of $\mathfrak{H}^{rat}_ν$. We give a formula for the dimension of $\mathfrak{L}_ν(triv)$ and give a geometric interpretation of its Frobenius algebra structure. The rank two cases are studied in further details.</div>
 
       <li><a href="https://arxiv.org/abs/1207.4523">Torus knots and the rational DAHA</a> (with E. Gorsky, J. Rasmussen, V. Shende). <span class="ref">Duke Math. J. 163 (2014), no. 14, 2709&ndash;2794.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We conjecturally extract the triply graded Khovanov-Rozansky homology of the (m, n) torus knot from the unique finite dimensional simple representation of the rational DAHA of type A, rank n - 1, and central character m/n. The conjectural differentials of Gukov, Dunfield and the third author receive an explicit algebraic expression in this picture, yielding a prescription for the doubly graded Khovanov-Rozansky homologies. We match our conjecture to previous conjectures of the first author relating knot homology to q, t-Catalan numbers, and of the last three authors relating knot homology to Hilbert schemes on singular curves.</div>
 
       <li><a href="https://arxiv.org/abs/1206.2226">On stable Khovanov homology of torus knots</a> (with E. Gorsky, J. Rasmussen). <span class="ref">Exp. Math. 22 (2013), no. 3, 265&ndash;281.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We conjecture that the stable Khovanov homology of torus knots can be described as the Koszul homology of an explicit non-regular sequence of quadratic polynomials. The corresponding Poincare series turns out to be related to the Rogers-Ramanujan identity.</div>
 
       <li><a href="https://arxiv.org/abs/1201.2115">The Hilbert scheme of a plane curve singularity and the HOMFLY homology of its link</a> (with J. Rasmussen, V. Shende and appendix by E. Gorsky). <span class="ref">Geom. Topol. 22 (2018), no. 2, 645&ndash;691.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We conjecture an expression for the dimensions of the Khovanov-Rozansky HOMFLY homology groups of the link of a plane curve singularity in terms of the weight polynomials of Hilbert schemes of points scheme-theoretically supported on the singularity. The conjecture specializes to our previous conjecture relating the HOMFLY polynomial to the Euler numbers of the same spaces upon setting t = -1. By generalizing results of Piontkowski on the structure of compactified Jacobians to the case of Hilbert schemes of points, we give an explicit prediction of the HOMFLY homology of a (k, n) torus knot as a certain sum over diagrams. The Hilbert scheme series corresponding to the summand of the HOMFLY homology with minimal &quot;a&quot; grading can be recovered from the perverse filtration on the cohomology of the compactified Jacobian. In the case of (k,n) torus knots, this space furnishes the unique finite dimensional simple representation of the rational spherical Cherednik algebra with central character k/n. Up to a conjectural identification of the perverse filtration with a previously introduced filtration, the work of Haiman and Gordon and Stafford gives formulas for the Hilbert scheme series when k = mn + 1.</div>
 
       <li><a href="https://arxiv.org/abs/1003.1568">The Hilbert scheme of a plane curve singularity and the HOMFLY polynomial of its link</a> (with V. Shende). <span class="ref">Duke Math. J. 161 (2012), no. 7, 1277&ndash;1303.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>The intersection of a complex plane curve with a small three-sphere surrounding one of its singularities is a non-trivial link. The refined punctual Hilbert schemes of the singularity parameterize subschemes supported at the singular point of fixed length and whose defining ideals have a fixed number of generators. We conjecture that the generating function of Euler characteristics of refined punctual Hilbert schemes is the HOMFLY polynomial of the link. The conjecture is verified for irreducible singularities y^k = x^n, whose links are the k,n torus knots, and for the singularity y^4 = x^7 - x^6 + 4 x^5 y + 2 x^3 y^2, whose link is the 2,13 cable of the trefoil.</div>
 
       <li><a href="https://arxiv.org/abs/0809.3976">Gromov-Witten/Donaldson-Thomas correspondence for toric 3-folds</a> (with D. Maulik, A. Okounkov, R. Pandharipande). <span class="ref">Invent. Math. 186 (2011), no. 2, 435&ndash;479.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We prove the equivariant Gromov-Witten theory of a nonsingular toric 3-fold X with primary insertions is equivalent to the equivariant Donaldson-Thomas theory of X. As a corollary, the topological vertex calculations by Agangic, Klemm, Marino, and Vafa of the Gromov-Witten theory of local Calabi-Yau toric 3-folds are proven to be correct in the full 3-leg setting.</div>
 
       <li><a href="https://arxiv.org/abs/0802.2739">Donaldson-Thomas theory of $A_n\times\mathbb{P}^1$</a> (with D. Maulik). <span class="ref">Compos. Math. 145 (2009), no. 5, 1249&ndash;1276.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We study the relative Donaldson-Thomas theory of A_n x P^1, where A_n is the surface resolution of a type A_n singularity. The action of divisor operators in the theory is expressed in terms of operators of the affine algebra \hat{gl}(n+1) on Fock space. Assuming a nondegeneracy conjecture, this gives a complete solution for the theory. The results complete the comparison of this theory with the Gromov-Witten theory of A_n x P^1 and the quantum cohomology of the Hilbert scheme of points on A_n.</div>
 
       <li><a href="https://arxiv.org/abs/0802.2737">Quantum cohomology of the Hilbert scheme of points on $A_n$-resolutions</a> (with D. Maulik). <span class="ref">J. Amer. Math. Soc. 22 (2009), no. 4, 1055&ndash;1091.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We determine the two-point invariants of the equivariant quantum cohomology of the Hilbert scheme of points of surface resolutions associated to type A_n singularities. The operators encoding these invariants are expressed in terms of the action of the affine Lie algebra \hat{gl}(n+1) on its basic representation. Assuming a certain nondegeneracy conjecture, these operators determine the full structure of the quantum cohomology ring. A relationship is proven between the quantum cohomology and Gromov-Witten/Donaldson-Thomas theories of A_n x P^1. We close with a discussion of the monodromy properties of the associated quantum differential equation and a generalization to singularities of type D and E.</div>
 
       <li><a href="https://arxiv.org/abs/0801.2339">A Lie-theoretic construction of spherical symplectic reflection algebras</a> (with P. Etingof, S. Loktev, L. Rybnikov). <span class="ref">Transform. Groups 13 (2008), no. 3-4, 541&ndash;556.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We propose a construction of the spherical subalgebra of a symplectic reflection algebra of an arbitrary rank corresponding to a star-shaped affine Dynkin diagram. Namely, it is obtained from the universal enveloping algebra of a certain semi-simple Lie algebra by the process of quantum Hamiltonian reduction. As an application, we propose a construction of finite-dimensional representations of the spherical subalgebra.</div>
 
       <li><a href="https://arxiv.org/abs/math/0511489">Harish-Chandra homomorphisms and symplectic reflection algebras for wreath-products</a> (with P. Etingof, V. Ginzburg, W. L. Gan). <span class="ref">Publ. Math. Inst. Hautes &Eacute;tudes Sci. No. 105 (2007), 91&ndash;155.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>The main result of the paper is a natural construction of the spherical subalgebra in a symplectic reflection algebra associated with a wreath-product in terms of quantum hamiltonian reduction of an algebra of differential operators on a representation space of an extended Dynkin quiver. The existence of such a construction has been conjectured in [EG]. We also present a new approach to reflection functors and shift functors for generalized preprojective algebras and symplectic reflection algebras associated with wreath-products.</div>
 
       <li><a href="https://arxiv.org/abs/math/0504395">Deformed Harish-Chandra homomorphism for the cyclic quiver</a>. <span class="ref">Math. Res. Lett. 14 (2007), no. 3, 359&ndash;372.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>In the case of cyclic quiver we prove that the deformed Harish-Chandra map whose existence was conjectured by Etingof and Ginzburg is well defined. As an application we prove Kirillov-type formula for the cyclotomic Bessel function.</div>
 
       <li><a href="https://arxiv.org/abs/math/0504089">Generalized double affine Hecke algebras of higher rank</a> (with P. Etingof, W. L. Gan). <span class="ref">J. Reine Angew. Math. 600 (2006), 177&ndash;201.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We define generalized double affine Hecke algebras (GDAHA) of higher rank, attached to a non-Dynkin star-like graph D. This generalizes GDAHA of rank 1 defined in math.QA/0406480 and math.QA/0409261. If the graph is extended D4, then GDAHA is the algebra defined by Sahi in q-alg/9710032, which is a generalization of the Cherednik algebra of type BCn. We prove the formal PBW theorem for GDAHA, and parametrize its irreducible representations in the case when D is affine (i.e. extended D4, E6, E7, E8) and q=1. We formulate a series of conjectures regarding algebraic properties of GDAHA. We expect that, similarly to how GDAHA of rank 1 provide quantizations of del Pezzo surfaces (as shown in math.QA/0406480), GDAHA of higher rank provide quantizations of deformations of Hilbert schemes of these surfaces. The proofs are based on the study of the rational version of GDAHA (which is closely related to the algebras studied in math.QA/0401038), and differential equations of Knizhnik-Zamolodchikov type.</div>
 
       <li><a href="https://arxiv.org/abs/math/0409256">Finite dimensional representations of the double affine Hecke algebra of rank 1</a> (with E. Stoica). <span class="ref">J. Pure Appl. Algebra 213 (2009), no. 5, 766&ndash;771.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We classify the finite dimensional representations of the double affine Hecke algebra of type $C^{\vee}C_1$ in the case when $q$ is not a root of 1.</div>
 
       <li><a href="https://arxiv.org/abs/math/0406480">Generalized double affine Hecke algebras of rank 1 and quantized del Pezzo surfaces</a> (with P. Etingof, E. Rains). <span class="ref">Adv. Math. 212 (2007), no. 2, 749&ndash;796.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>Let D be a simply laced Dynkin diagram of rank r whose affinization has the shape of a star (i.e., D4,E6,E7,E8). To such a diagram one can attach a group G whose generators correspond to the legs of the affinization, have orders equal to the leg lengths plus 1, and the product of the generators is 1. The group G is then a 2-dimensional crystallographic group: G=Z_l\ltimes Z^2, where l is 2,3,4, and 6, respectively. In this paper, we define a flat deformation H(t,q) of the group algebra C[G] of this group, by replacing the relations saying that the generators have prescribed orders by their deformations, saying that the generators satisfy monic polynomial equations of these orders with arbitrary roots (which are deformation parameters). The algebra H(t,q) for D4 is the Cherednik algebra of type C^\check C_1, which was studied by Noumi, Sahi, and Stokman, and controls Askey-Wilson polynomials. We prove that H(t,q) is the universal deformation of the twisted group algebra of G, and that this deformation is compatible with certain filtrations on C[G]. We also show that if q is a root of unity, then for generic t the algebra H(t,q) is an Azumaya algebra, and its center is the function algebra on an affine del Pezzo surface. For generic q, the spherical subalgebra eH(t,q)e provides a quantization of such surfaces. We also discuss connections of H(t,q) with preprojective algebras and Painlevé VI.</div>
 
       <li><a href="https://arxiv.org/abs/math/0311512">Vector valued spherical functions and Macdonald-Koornwinder polynomials</a> (with J. Stokman). <span class="ref">Compos. Math. 141 (2005), no. 5, 1310&ndash;1350.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We interpret the five parameter family of Macdonald-Koornwinder polynomials as vector valued spherical functions on quantum Grassmannians.</div>
 
       <li><a href="https://arxiv.org/abs/math-ph/0311036">Laplace transformations and spectral theory of two-dimensional semidiscrete and discrete hyperbolic Schr&ouml;dinger operators</a> (with A. Penskoi). <span class="ref">Int. Math. Res. Not. 2005, no. 18, 1089&ndash;1126.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We introduce Laplace transformations of 2D semi-discrete hyperbolic Schroedinger operators and show their relation to a semi-discrete 2D Toda lattice. We develop the algebro-geometric spectral theory of 2D semi-discrete hyperbolic Schroedinger operators and solve the direct spectral problem for 2D discrete ones (the inverse problem for discrete operators was already solved by Krichever). Using the spectral theory we investigate spectral properties of the Laplace transformations of these operators. This makes it possible to find solutions of the semi-discrete and discrete 2D Toda lattices in terms of theta-functions.</div>
 
       <li><a href="https://arxiv.org/abs/math/0311005">Quantization, orbifold cohomology, and Cherednik algebras</a> (with P. Etingof). <span class="ref">Contemp. Math. 417, Amer. Math. Soc., Providence, RI, 2006, 171&ndash;182.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We compute the Hochschild homology of the crossed product $\Bbb C[S_n]\ltimes A^{\otimes n}$ in terms of the Hochschild homology of the associative algebra $A$ (over $\Bbb C$). It allows us to compute the Hochschild (co)homology of $\Bbb C[W]\ltimes A^{\otimes n}$ where $A$ is the $q$-Weyl algebra or any its degeneration and $W$ is the Weyl group of type $A_{n-1}$ or $B_n$. For a deformation quantization $A_+$ of an affine symplectic variety $X$ we show that the Hochschild homology of $S^n A$, $A=A_+[\hbar^{-1}]$ is additively isomorphic to the Chen-Ruan orbifold cohomology of $S^nX$ with coefficients in $\Bbb C((\hbar))$. We prove that for $X$ satisfying $H^1(X,\Bbb C)=0$ (or $A\in VB(d)$) the deformation of $S^nX$ ($\Bbb C[S_n]\ltimes A^{\otimes n}$) which does not come from deformations of $X$ ($A$) exists if and only if $\dim X=2$ ($d=2$). In particular if $A$ is $q$-Weyl algebra (its trigonometric or rational degeneration) then the corresponding nontrivial deformations yield the double affine Hecke algebras of type $A_{n-1}$ (its trigonometric or rational versions) introduced by Cherednik.</div>
 
       <li><a href="https://arxiv.org/abs/math/0306393">Double affine Hecke algebras of rank 1 and affine cubic surfaces</a>. <span class="ref">Int. Math. Res. Not. 2004, no. 18, 877&ndash;912.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We study the algebraic properties of the five-parameter family $H(t_1,t_2,t_3,t_4;q)$ of double affine Hecke algebras of type $C^\vee C_1$. This family generalizes Cherednik&#x27;s double affine Hecke algebras of rank 1. It was introduced by Sahi and studied by Noumi and Stokman as an algebraic structure which controls Askey-Wilson polynomials. We show that if $q=1$, then the spectrum of the center of $H$ is an affine cubic surface $C$, obtained from a projective one by removing a triangle consisting of smooth points. Moreover, any such surface is obtained as the spectrum of the center of $H$ for some values of parameters. This result allows one to give a simple geometric description of the action of an extension of $PGL_2(\Bbb Z)$ by $\Bbb Z$ on the center of $H$. When $C$ is smooth, it admits a unique algebraic symplectic structure, and the spherical subalgebra $eHe$ of the algebra $H$ for $q=e^\hbar$ provides its deformation quantization. Using that $H^2(C,\Bbb C)=\Bbb C^5$, we find that the Hochschild cohomology $HH^2(H)$ (for $q=e^\hbar$) is 5-dimensional for generic parameter values. From this we deduce that the only deformations of $H$ come from variations of parameters. This explains from the point of view of noncommutative geometry why one cannot add more parameters into the theory of Askey-Wilson polynomials. We also prove that the five-parameter family $H(t_1,t_2,t_3,t_4;q)$ of algebras yields the universal deformation of $q$-Weyl algebra crossed with ${\Bbb Z}_2$ and the family of cubic surfaces $C=C_{\underline{t}}$, $\underline{t}\in \CC^4_{\underline{t}}$ gives the universal deformation of the Poisson algebra $\CC[X^{\pm 1},P^{\pm 1}]^{{\Bbb ZZ}_2}$.</div>
 
       <li><a href="https://arxiv.org/abs/math/0303190">Double affine Hecke algebras and Calogero-Moser spaces</a>. <span class="ref">Represent. Theory 8 (2004), 243&ndash;266.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>In this paper we prove that the spherical subalgebra $eH_{1,τ}e$ of the double affine Hecke algebra $H_{1,τ}$ is an integral Cohen-Macaulay algebra isomorphic to the center $Z$ of $H_{1,τ}$, and $H_{1,τ}e$ is a Cohen-Macaulay $eH_{1,τ}e$-module with the property $H_{1,τ}=End_{eH_{1,τ}e}(H_{1,τ}e)$. In the case of the root system $A_{n-1}$ the variety $Spec(Z)$ is smooth and coincides with the completion of the configuration space of the relativistic analog of the trigomonetric Calogero-Moser system. This implies the result of Cherednik that the module $eH_{1,τ}$ is projective and all irreducible finite dimensional representations of $H_{1,τ}$ are regular representation of the finite Hecke algebra.</div>
 
       <li><a href="https://arxiv.org/abs/math/0212029">Generalized Lame operators</a> (with O. Chalykh, P. Etingof). <span class="ref">Comm. Math. Phys. 239 (2003), no. 1-2, 115&ndash;153.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We introduce a class of multidimensional Schrödinger operators with elliptic potential which generalize the classical Lamé operator to higher dimensions. One natural example is the Calogero--Moser operator, others are related to the root systems and their deformations. We conjecture that these operators are algebraically integrable, which is a proper generalization of the finite-gap property of the Lamé operator. Using earlier results of Braverman, Etingof and Gaitsgory, we prove this under additional assumption of the usual, Liouville integrability. In particular, this proves the Chalykh--Veselov conjecture for the elliptic Calogero--Moser problem for all root systems. We also establish algebraic integrability in all known two-dimensional cases. A general procedure for calculating the Bloch eigenfunctions is explained. It is worked out in detail for two specific examples: one is related to B_2 case, another one is a certain deformation of the A_2 case. In these two cases we also obtain similar results for the discrete versions of these problems, related to the difference operators of Macdonald--Ruijsenaars type.</div>
 
       <li><a href="https://arxiv.org/abs/math/0202076">Heckman-Opdam's Jacobi polynomials for the $BC_n$ root system and generalized spherical functions</a>. <span class="ref">Adv. Math. 186 (2004), no. 1, 153&ndash;180.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>We give a construction for three parameter family of Jack polynolials for the root system $BC_n$ through the generalized spherical functions on the symmetric space $GL(m+n)/GL(m)\times GL(n)$.</div>
 
       <li><a href="https://arxiv.org/abs/math-ph/0010024">Two-dimensional algebro-geometric difference operators</a> (with A. Penskoi). <span class="ref">J. Phys. A 33 (2000), no. 50, 9255&ndash;9264.</span>
+        <button class="abs-toggle" type="button" aria-expanded="false">Abstract</button>
+        <div class="abstract" hidden>A generalized inverse problem for a two-dimensional difference operator is introduced. A new construction of the algebro-geometric difference operators of two types first considered by I.M.Krichever and S.P.Novikov is proposed</div>
 
       <li><a href="isoenergy.pdf">The isoenergy spectral problem for multidimensional difference operators</a>. <span class="ref">Funktsional. Anal. i Prilozhen. 36 (2002), no. 2, 45&ndash;61; translation in Funct. Anal. Appl. 36 (2002), no. 2, 120&ndash;133.</span>
 
@@ -339,8 +461,25 @@
         document.getElementById(btn.dataset.tab).hidden = false;
       });
     });
+
+    document.querySelectorAll('.abs-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        btn.nextElementSibling.hidden = open;
+      });
+    });
   })();
 </script>
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$']] },
+    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+  };
+</script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </body>
 </html>

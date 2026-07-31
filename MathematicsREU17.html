@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REU 2017: theoretical part of the project</title>
+  <meta name="author" content="Alexei Oblomkov">
+  <meta name="description"
+        content="Theoretical part of the REU 2017 project: combinatorics of partitions and geometry of monomial ideals">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <p class="crumb"><a href="REU2017.html">&larr; REU 2017</a></p>
+
+  <header class="site">
+    <h1>The theoretical part of the REU 2017 project</h1>
+    <p class="course-term">Alexei Oblomkov &middot; June 2017</p>
+  </header>
+
+  <div class="page">
+    <nav class="toc" aria-label="Contents">
+      <div class="subhead">Contents</div>
+      <ul>
+        <li><a href="#combinatorics">1. Combinatorics of partitions</a>
+          <ul>
+            <li><a href="#partitions">1.1. Partitions</a></li>
+            <li><a href="#rsk">1.2. RSK algorithm</a></li>
+            <li><a href="#macmahon">1.3. MacMahon formula</a></li>
+            <li><a href="#main-problem">1.4. The main problem</a></li>
+          </ul>
+        </li>
+        <li><a href="#monomial-ideals">2. Geometry of monomial ideals</a>
+          <ul>
+            <li><a href="#limit-shapes">2.1. Limit shapes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <h2 id="combinatorics">1. Combinatorics of partitions</h2>
+    <p>
+      We are interested in the study of partitions in dimensions two and three. The main
+      objective is to find a combinatorial explanation for the coincidence of the PT and
+      DT topological vertices. The main tool for us will be Python and the Sage library.
+      On the practical level, we plan to create a Python library that handles 3D
+      partitions.
+    </p>
+
+    <h3 id="partitions">1.1. Partitions</h3>
+    <p>
+      The major treatise on combinatorics in general, and partitions in particular, is
+      Stanley's book:
+      <a href="http://www-math.mit.edu/~rstan/ec/ec1toc.html">table of contents of volume 1</a>,
+      <a href="http://www-math.mit.edu/~rstan/ec/ec2toc.html">table of contents of volume 2</a>.
+      Our focus will be chapter 7 of volume 2.
+    </p>
+
+    <h3 id="rsk">1.2. RSK algorithm</h3>
+    <p>
+      The RSK algorithm is a backbone of enumerative combinatorics, and many enumerative
+      formulas for 3D partitions rely on it. Please read section 11 of chapter 7 of
+      Stanley's book.
+    </p>
+
+    <h3 id="macmahon">1.3. MacMahon formula</h3>
+    <p>The MacMahon formula is the following statement:</p>
+    <p>
+      \[
+        \sum_{\pi \in 3D \text{ partitions}} q^{|\pi|} = \prod_{k>0}(1-q^k)^{-k}.
+      \]
+    </p>
+    <p>
+      There are many proofs of this statement. We will look at the proof from Stanley's
+      book; read sections 12 and 13 of chapter 7.
+    </p>
+
+    <h3 id="main-problem">1.4. The main problem</h3>
+    <p>
+      There is a natural generalization of the MacMahon formula. Instead of the usual 3D
+      partitions we can consider infinite partitions with infinite ends of a given shape.
+      We denote such a set by \(3D_\mu\), where \(\mu\) is the shape at infinity. It turns
+      out that we can count these partitions as well as the usual ones:
+    </p>
+    <p>
+      \[
+        \sum_{\pi \in 3D_\mu} q^{|\pi|} = s_{\mu}(q^\rho) \prod_{k>0}(1-q^k)^{-k}.
+      \]
+    </p>
+
+    <h2 id="monomial-ideals">2. Geometry of monomial ideals</h2>
+
+    <h3 id="limit-shapes">2.1. Limit shapes</h3>
+
+    <p class="source-note">Created 5 June 2017.</p>
+  </div>
+
+</div>
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$']], tags: 'ams' },
+    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+  };
+</script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

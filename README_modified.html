@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REU 2017: software jump-start</title>
+  <meta name="author" content="Alexei Oblomkov">
+  <meta name="description"
+        content="Software setup guide and resources for the UMass Math summer project, REU 2017">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <p class="crumb"><a href="REU2017.html">&larr; REU 2017</a></p>
+
+  <header class="site">
+    <h1>UMass Math summer project: software jump-start</h1>
+    <p class="course-term">Assembled by Gavin Morris &middot; May 2017</p>
+  </header>
+
+  <div class="page">
+    <p class="source-note" style="margin-top:0">
+      This guide was written in 2017. Some of the tools and links below have since been
+      retired or moved &mdash; the Atom editor in particular was discontinued in 2022.
+    </p>
+
+    <nav class="toc" aria-label="Contents">
+      <div class="subhead">Contents</div>
+      <ul>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#glossary">Glossary</a></li>
+        <li><a href="#prerequisites">Prerequisites</a>
+          <ul>
+            <li><a href="#prereq-software">Software</a></li>
+            <li><a href="#prereq-git">Git</a></li>
+            <li><a href="#prereq-markdown">Markdown</a></li>
+            <li><a href="#prereq-python">Python</a></li>
+          </ul>
+        </li>
+        <li><a href="#resources">Resources</a>
+          <ul>
+            <li><a href="#res-git">Git</a></li>
+            <li><a href="#res-markdown">Markdown</a></li>
+            <li><a href="#res-python">Python</a></li>
+            <li><a href="#res-software">Software</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <h2 id="summary">Summary</h2>
+    <p>Enter project summary here:</p>
+    <ul class="reading">
+      <li>GitHub project URL</li>
+      <li>Reading materials</li>
+      <li>Datasets (GitHub or Dropbox URL)</li>
+      <li>Mentor contact info</li>
+    </ul>
+
+    <h2 id="glossary">Glossary</h2>
+    <blockquote>
+      <strong>Git</strong> is a version control system (VCS) for tracking changes in
+      computer files and coordinating work on those files among multiple people. It is
+      primarily used for software development, but it can be used to keep track of changes
+      in any set of files. As a distributed revision control system it is aimed at speed,
+      data integrity, and support for distributed, non-linear workflows.
+    </blockquote>
+    <ul class="reading">
+      <li><a href="https://en.wikipedia.org/wiki/Git">What is Git?</a></li>
+    </ul>
+
+    <blockquote>
+      <strong>Markdown</strong> is a text-to-HTML conversion tool created by John Gruber of
+      <a href="https://daringfireball.net/projects/markdown/">Daring Fireball</a> fame.
+    </blockquote>
+    <ul class="reading">
+      <li><a href="http://kirkstrobeck.github.io/whatismarkdown.com/">What is Markdown?</a></li>
+    </ul>
+
+    <blockquote>
+      <strong>Python</strong> is an interpreted, object-oriented, high-level programming
+      language with dynamic semantics. Its high-level built-in data structures, combined
+      with dynamic typing and dynamic binding, make it very attractive for rapid
+      application development, as well as for use as a scripting or glue language to
+      connect existing components together.
+    </blockquote>
+    <ul class="reading">
+      <li><a href="https://www.python.org/doc/essays/blurb/">What is Python?</a></li>
+    </ul>
+
+    <h2 id="prerequisites">Prerequisites</h2>
+    <p>
+      The following software packages and dependencies need to be installed prior to the
+      project. Please email any issues, comments, or questions before the project starts;
+      the contact is <a href="mailto:oblomkov@math.umass.edu">oblomkov@math.umass.edu</a>.
+    </p>
+
+    <h3 id="prereq-software">Software</h3>
+    <ul class="reading">
+      <li><a href="https://atom.io/">Atom Editor</a>, a text editor created by GitHub.
+        There is a large button on the landing page to download for the appropriate
+        operating system (Linux, macOS, and Windows).</li>
+    </ul>
+
+    <h3 id="prereq-git">Git</h3>
+    <ul class="reading">
+      <li>Please read or complete at least the following within
+        <a href="https://git-scm.com/book/en/v2">Pro Git</a>: chapters 1&ndash;3,
+        chapters 5&ndash;8, chapter 10, and appendix A3 (review).</li>
+      <li>In order to share your work on this project with the team and mentors, a free
+        GitHub account is required &mdash;
+        <a href="https://github.com/join">sign up here</a>, with optional
+        <a href="https://help.github.com/articles/signing-up-for-a-new-github-account/">instructions</a>.</li>
+    </ul>
+
+    <h3 id="prereq-markdown">Markdown</h3>
+    <p>Markdown is used for official project documentation. Please review the following:</p>
+    <ul class="reading">
+      <li><a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a></li>
+      <li><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">Basic writing and formatting syntax</a></li>
+      <li>The <a href="https://atom.io/packages/markdown-preview">Markdown Preview</a>
+        plugin for Atom is recommended for viewing changes in real time. To install it,
+        launch Atom, select <code>Preferences</code>, then <code>Install</code>, enter
+        <code>markdown-preview</code> in the <code>Search packages</code> field, and click
+        <code>Install</code>.</li>
+    </ul>
+
+    <h3 id="prereq-python">Python</h3>
+    <p>Reading 52 chapters before the project starts might be a bit challenging:</p>
+    <ul class="reading">
+      <li><a href="https://learnpythonthehardway.org/book/">Learn Python the Hard Way</a> (free)</li>
+      <li><a href="https://learncodethehardway.org/python/#buy">Paid course with videos</a> (optional)</li>
+    </ul>
+
+    <div class="subhead">Install Python 3</div>
+    <ul class="reading">
+      <li>Linux &mdash;
+        <a href="https://www.python.org/downloads/source/">official</a>,
+        <a href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-centos-7">CentOS</a>,
+        <a href="http://python-guide-pt-br.readthedocs.io/en/latest/starting/install3/linux/">Ubuntu</a></li>
+      <li>macOS &mdash;
+        <a href="https://www.python.org/downloads/mac-osx/">official</a>,
+        <a href="http://python-guide-pt-br.readthedocs.io/en/latest/starting/install3/osx/">guide</a></li>
+      <li>Windows &mdash;
+        <a href="https://www.python.org/downloads/windows/">official</a>,
+        <a href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10">Windows 10</a></li>
+    </ul>
+
+    <div class="subhead">Install SageMath, SciPy, and NumPy</div>
+    <ul class="reading">
+      <li><a href="http://www.sagemath.org/">SageMath</a> &mdash;
+        <a href="http://mirrors.mit.edu/sage/index.html">Linux, macOS, and Windows</a></li>
+      <li><a href="https://www.scipy.org/index.html">SciPy and NumPy</a> &mdash;
+        <a href="https://www.scipy.org/install.html">installation instructions</a></li>
+    </ul>
+
+    <h2 id="resources">Resources</h2>
+    <p>
+      Supplemental materials for this project, the associated workshops, and the project
+      goals.
+    </p>
+
+    <h3 id="res-git">Git</h3>
+    <div class="subhead">Cheat sheets</div>
+    <ul class="reading">
+      <li><a href="https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf">GitHub</a></li>
+      <li><a href="https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet">Atlassian</a></li>
+      <li><a href="https://www.git-tower.com/learn/cheat-sheets/git">Git Tower</a></li>
+    </ul>
+    <div class="subhead">Online tutorials</div>
+    <ul class="reading">
+      <li><a href="https://try.github.io/levels/1/challenges/1">Git in 15 minutes</a></li>
+      <li><a href="https://www.codecademy.com/learn/learn-git">Codecademy: Learn Git</a></li>
+      <li><a href="https://git-scm.com/docs/gittutorial">gittutorial</a></li>
+      <li><a href="https://gist.github.com/jaseemabid/1321592">Additional tutorials</a></li>
+    </ul>
+
+    <h3 id="res-markdown">Markdown</h3>
+    <ul class="reading">
+      <li><a href="http://www.markdowntutorial.com/">Markdown Tutorial</a></li>
+      <li>John Gruber's <a href="https://daringfireball.net/projects/markdown/">Markdown</a>
+        (there is no need to download the zip file)</li>
+      <li><a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf">Markdown syntax</a>,
+        the official GitHub cheat sheet</li>
+      <li><a href="https://beegit.com/markdown-cheat-sheet">Markdown cheat sheet</a></li>
+      <li><a href="https://blog.ghost.org/markdown/">How to write faster, better, and longer:
+        the ultimate guide to Markdown</a></li>
+    </ul>
+    <div class="subhead">Templates and style references</div>
+    <ul class="reading">
+      <li>A good starter <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">template</a></li>
+      <li>A good example of how to use a README &mdash;
+        <a href="https://github.com/GSA/api-documentation-template">GSA</a> (not all sections germane)</li>
+      <li>A more elaborate but clean example from
+        <a href="https://github.com/Netflix/Hystrix">Netflix</a></li>
+      <li>An easy <a href="https://gist.github.com/jxson/1784669">layout</a> with more detail</li>
+      <li>A curated <a href="https://github.com/matiassingers/awesome-readme">list</a> of awesome READMEs</li>
+    </ul>
+
+    <h3 id="res-python">Python</h3>
+    <div class="subhead">Online tutorials</div>
+    <ul class="reading">
+      <li><a href="https://www.codecademy.com/learn/python">Codecademy: Learn Python</a></li>
+      <li><a href="https://developers.google.com/edu/python/">Google's Python Class</a></li>
+      <li><a href="https://www.learnpython.org/">Learn Python</a></li>
+    </ul>
+    <div class="subhead">Additional books (optional)</div>
+    <ul class="reading">
+      <li><a href="https://python.swaroopch.com/">A Byte of Python</a></li>
+      <li><a href="http://www.diveintopython.net/">Dive Into Python</a></li>
+      <li><a href="http://shop.oreilly.com/product/0636920028154.do">Learning Python, 5th edition</a></li>
+      <li><a href="http://shop.oreilly.com/product/0636920045267.do">Think Python, 2nd edition</a></li>
+    </ul>
+
+    <h3 id="res-software">Software</h3>
+    <p>None of the material below is required for the project, but it may be helpful.</p>
+    <div class="subhead">macOS</div>
+    <ul class="reading">
+      <li><a href="https://brew.sh/">Homebrew</a>, a package manager for macOS</li>
+      <li><a href="https://www.iterm2.com/">iTerm2</a>, a better terminal</li>
+    </ul>
+    <div class="subhead">Windows</div>
+    <ul class="reading">
+      <li><a href="https://msdn.microsoft.com/en-us/powershell">PowerShell</a> &mdash;
+        <a href="https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell">getting started</a>,
+        <a href="https://technet.microsoft.com/en-us/library/bb978526.aspx">scripting</a></li>
+      <li><a href="https://chocolatey.org/">Chocolatey</a>, a package manager for Windows</li>
+      <li><a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Linux Bash shell on Windows 10</a></li>
+      <li><a href="http://www.putty.org/">PuTTY</a>, a free SSH and telnet client</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

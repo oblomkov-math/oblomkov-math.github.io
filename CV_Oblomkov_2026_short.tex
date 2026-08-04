@@ -1,0 +1,129 @@
+%% CV_Oblomkov_2026_short.tex --- two-page academic short CV.
+%%
+%% Shares cvstyle.sty with the full CV, and pulls its Selected Publications
+%% straight out of publications.tex: \pub is redefined to discard and
+%% \pubsel to emit, so the short list is a real subset of the full list and
+%% cannot drift away from it.
+%%
+%% Build:  latexmk -pdf CV_Oblomkov_2026_short.tex
+
+\documentclass[11pt]{article}
+\usepackage{cvstyle}
+
+\renewcommand{\cvdoctype}{Short CV}
+
+% Tighter section spacing than the full CV, so this holds to two pages.
+\titlespacing*{\section}{0pt}{1.9ex plus .4ex minus .2ex}{0.7ex plus .1ex}
+
+\hypersetup{
+  pdftitle={Alexei Oblomkov --- Short CV},
+  pdfauthor={Alexei Oblomkov},
+  pdfsubject={Academic curriculum vitae, short form},
+}
+
+% Keep only the starred entries when publications.tex is read in.
+\renewcommand{\pub}[3]{}
+\renewcommand{\pubsel}[3]{%
+  \item \ifblank{#1}{}{(with #1) }\emph{#2}, #3}
+\renewcommand{\pubheading}[1]{\section{Selected Publications}}
+\renewcommand{\pubsubheading}[1]{\subsection*{Selected #1}}
+
+\begin{document}
+\thispagestyle{cvfirst}
+
+\cvheader
+
+% =====================================================================
+\section{Research Interests}
+
+Representation theory (double affine Hecke and symplectic reflection
+algebras, Cherednik algebras); algebraic geometry (Hilbert schemes,
+Gromov--Witten and Donaldson--Thomas invariants, affine Springer fibers);
+knot homology and categorification; mathematical physics and integrable
+systems.
+
+% =====================================================================
+\section{Education}
+
+\begin{cventries}
+  \cvitem{2005}{Ph.D. in Mathematics, Massachusetts Institute of Technology.
+    Advisor: Pavel Etingof.}
+  \cvitem{1998}{M.A. in Pure Mathematics, Independent University of Moscow
+    and Moscow State University.}
+\end{cventries}
+
+% =====================================================================
+\section{Employment}
+
+\begin{cventries}
+  \cvitem{2020--}{Professor, University of Massachusetts, Amherst.}
+  \cvitem{2018 (Spring)}{Research Professor, MSRI, Berkeley.}
+  \cvitem{2015--2019}{Associate Professor, University of Massachusetts,
+    Amherst.}
+  \cvitem{2009--2015}{Assistant Professor, University of Massachusetts,
+    Amherst.}
+  \cvitem{2006--2009}{Instructor, then Visiting Assistant Professor,
+    Princeton University.}
+  \cvitem{2005--2006}{Postdoctoral Fellow, Institute for Advanced Study.}
+\end{cventries}
+
+% =====================================================================
+\section{Grants and Awards}
+
+\begin{cventries}
+  \cvitem{2022--2025}{NSF DMS-2200798, \$217,038, sole PI.}
+  \cvitem{2018--2021}{NSF FRG DMS-1760373, \$300,000 for UMass.}
+  \cvitem{2014--2019}{NSF CAREER DMS-1352398, \$420,000, sole PI.}
+  \cvitem{2010--2013}{NSF DMS-1001609, \$123,910, sole PI.}
+  \cvitem{2007--2010}{NSF DMS-0701367, \$111,300, sole PI.}
+  \cvitem{2018}{Simons Fellow in Mathematics.}
+  \cvitem{2014}{NSF CAREER Award.}
+  \cvitem{2010--2012}{Alfred P. Sloan Research Fellowship.}
+\end{cventries}
+
+% =====================================================================
+\input{publications}
+
+\smallskip
+The complete list of 52 papers is available at
+\href{https://oblomkov-math.github.io}{oblomkov-math.github.io}.
+
+% =====================================================================
+\section{Editorial Service}
+
+\begin{cventries}
+  \cventry{2025--}{Managing Editor, \emph{Galileo}}
+    {Mathematical Sciences Publishers (MSP); first issue 2027.}
+\end{cventries}
+
+Referee for Annals of Mathematics, Inventiones, Journal of the AMS,
+Communications in Mathematical Physics, Advances in Mathematics, Compositio,
+Selecta, IMRN, and Transactions of the AMS. Grant proposal review for NSERC,
+NSA, Swiss NSF, NWO, and the Newton Institute; three NSF panels.
+
+% =====================================================================
+\section{Selected Conference Organization}
+
+\begin{cventries}
+  \cvitem{2025}{Month-long program, Bernoulli Center, EPFL, Lausanne.}
+  \cvitem{2023}{Two-month program, Simons Center for Geometry and Physics.}
+  \cvitem{2021--2023}{AIM research community and AIM workshop.}
+  \cvitem{2019--2022}{FRG workshops at UC Davis, UMass Amherst and the
+    University of Oregon.}
+  \cvitem{2014--2018}{Workshops at Banff, Amherst and AIM.}
+\end{cventries}
+
+% =====================================================================
+\section{Ph.D. Advising}
+
+\begin{cventries}
+  \cvitem{2024}{Arthur Wang.}
+  \cvitem{2016}{Thomas Shelly --- Visiting Assistant Professor, Mount Holyoke
+    College.}
+  \cvitem{2015}{Tobias Wilson --- Bloomberg.}
+  \cvitem{Current}{Pranav Kalkunte; Chuijiao Zhang.}
+\end{cventries}
+
+Mentored UMass REU teams in the summers of 2013, 2015--2019 and 2025.
+
+\end{document}

@@ -1,0 +1,149 @@
+%% cvstyle.sty --- shared format for Alexei Oblomkov's CV documents.
+%%
+%% Used by CV_Oblomkov_2026.tex (full CV) and CV_Oblomkov_2026_short.tex
+%% (two-page short CV) so the two can never drift apart visually.
+%%
+%% Classic academic style: small-caps section headings over a hairline rule,
+%% dates set in a left margin column, Times-based text with matching math.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cvstyle}[2026/08/04 v1.0 Academic CV style]
+
+% ---------------------------------------------------------------- fonts
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{newtxtext}
+\RequirePackage{newtxmath}      % must follow newtxtext
+\RequirePackage{microtype}
+
+% --------------------------------------------------------------- layout
+\RequirePackage[letterpaper,
+                left=1in, right=1in, top=1in, bottom=1in,
+                headheight=14pt, headsep=18pt, footskip=26pt]{geometry}
+\RequirePackage{etoolbox}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage[leftmargin=2.2em, labelsep=0.5em, itemsep=0.75ex,
+                parsep=0pt, topsep=0.6ex, partopsep=0pt]{etaremune}
+\RequirePackage{xcolor}
+\RequirePackage{xurl}
+\RequirePackage[hidelinks,breaklinks=true,
+                pdfcreator={},pdfproducer={}]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}   % keeps long journal names from overfilling
+\raggedbottom
+\hyphenpenalty=200
+
+% ------------------------------------------------------------- headings
+% The rule goes on its own line beneath the heading. Do NOT try to tighten
+% the gap with a negative \vspace here: \titlerule is \linewidth wide, so it
+% is already broken to the next line, and a negative skip drags it back up
+% onto the heading's baseline and strikes through the text.
+% \titlerule sits on its own line directly beneath the heading. Do NOT add a
+% negative \vspace to snug it up: measured on a test sheet, -0.8ex already
+% grazes the descenders of "Departmental and University Service" and -1.1ex
+% strikes clean through the text. Nor raise the rule with \rule[...] -- that
+% enlarges its line box and pushes the body copy down instead.
+\titleformat{\section}
+  {\normalfont\large\scshape}{}{0pt}{}
+  [{\titlerule[0.4pt]}]
+% A document that needs to be tighter (the two-page short CV) simply reissues
+% \titlespacing* after loading this package.
+\titlespacing*{\section}{0pt}{2.6ex plus .6ex minus .2ex}{1.0ex plus .2ex}
+
+\titleformat{\subsection}{\normalfont\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{1.8ex plus .3ex}{0.6ex}
+
+% Year label inside the talks list.
+\newcommand{\cvyear}[1]{%
+  \par\addvspace{1.1ex}{\bfseries #1}\par\addvspace{0.4ex}}
+
+% -------------------------------------------------------- running heads
+% \cvdoctype is what appears at the top right of continuation pages.
+\newcommand{\cvdoctype}{Curriculum Vitae}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\small\scshape Alexei Oblomkov}
+\fancyhead[R]{\small\scshape \cvdoctype}
+\fancyfoot[C]{\small\thepage\ of \pageref{LastPage}}
+
+% Page 1 carries the name block already, so it gets the footer only.
+\fancypagestyle{cvfirst}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[C]{\small\thepage\ of \pageref{LastPage}}%
+}
+
+% ------------------------------------------------------- dated entries
+% Replaces the hand-padded `tabbing' blocks of the older CV. Unlike
+% tabbing and tabular, this reflows when text grows and breaks across
+% pages on its own.
+\newlist{cventries}{description}{1}
+\setlist[cventries]{style=multiline, align=left,
+                    leftmargin=1.15in, labelwidth=1.05in, labelsep=0.1in,
+                    font=\normalfont, itemsep=0.7ex, parsep=0pt,
+                    topsep=0.6ex, partopsep=0pt}
+
+% \cventry{dates}{headline}{detail} -- detail may be empty.
+\newcommand{\cventry}[3]{%
+  \item[#1]\textbf{#2}\ifblank{#3}{}{\newline #3}}
+
+% \cvitem{dates}{text} -- single-line variant, for grants and awards.
+\newcommand{\cvitem}[2]{\item[#1]#2}
+
+% A plain list for service prose and advising notes.
+\newlist{cvlist}{itemize}{1}
+\setlist[cvlist]{label=\textendash, leftmargin=1.2em, labelsep=0.5em,
+                 itemsep=0.5ex, parsep=0pt, topsep=0.5ex}
+
+% -------------------------------------------------------- publications
+% Descending numbering: the newest paper is first *and* highest-numbered.
+% etaremune only accepts `start' as an environment option; its spacing is
+% set as package options above.
+\newenvironment{publist}{\begin{etaremune}}{\end{etaremune}}
+
+% \pub{coauthors}{title}{venue} -- coauthors may be empty for solo papers;
+% the "(with ...)" wrapper is added here so it is punctuated identically
+% every time.
+\newcommand{\pub}[3]{%
+  \item \ifblank{#1}{}{(with #1) }\emph{#2}, #3}
+
+% \pubsel is a paper also worth showing on the two-page CV. It behaves
+% exactly like \pub here; CV_Oblomkov_2026_short.tex redefines \pub to
+% discard and \pubsel to emit, so the short list is a genuine subset of
+% publications.tex rather than a second copy that can drift.
+\newcommand{\pubsel}[3]{\pub{#1}{#2}{#3}}
+
+% Headings inside publications.tex, so the short CV can retitle them.
+\newcommand{\pubheading}[1]{\section{#1}}
+\newcommand{\pubsubheading}[1]{\subsection*{#1}}
+
+% Identifier links. \arxiv accepts both the modern numeric form and the
+% legacy math.QA/9901234 form; arxiv.org resolves both.
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
+
+% ------------------------------------------------------------- header
+% \cvheader typesets the name block. Kept here so both documents match.
+\newcommand{\cvheader}{%
+  \begin{center}
+    {\LARGE\scshape Alexei Oblomkov}\\[0.7ex]
+    Professor of Mathematics\\[0.3ex]
+    Department of Mathematics and Statistics,
+    University of Massachusetts Amherst\\[0.7ex]
+    \small
+    LGRT 1234H, 710 North Pleasant Street, Amherst, MA 01003--9305, USA\\
+    \href{mailto:oblomkov@math.umass.edu}{oblomkov@math.umass.edu}
+    \quad$\cdot$\quad +1 (413) 545--2857\\
+    \href{https://oblomkov-math.github.io}{oblomkov-math.github.io}
+    \quad$\cdot$\quad
+    ORCID \href{https://orcid.org/0000-0002-8450-4761}{0000-0002-8450-4761}
+  \end{center}
+  \vspace{0.6ex}
+}
+
+\endinput

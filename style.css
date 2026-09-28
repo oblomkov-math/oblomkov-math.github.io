@@ -256,6 +256,35 @@ ul.materials a:hover { text-decoration: underline; }
 }
 .page mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
 
+/* Schedule table and key caps, for the Lean seminar page */
+.table-scroll { overflow-x: auto; }
+table.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .95rem;
+}
+table.schedule th,
+table.schedule td {
+  text-align: left;
+  vertical-align: top;
+  padding: .45rem .6rem;
+  border-bottom: 1px solid var(--line);
+}
+table.schedule th {
+  color: var(--muted);
+  font-weight: 600;
+  border-bottom-width: 2px;
+}
+table.schedule td:first-child { color: var(--muted); white-space: nowrap; }
+.page kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .85em;
+  padding: .05rem .3rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #faf9f7;
+}
+
 @media (max-width: 620px) {
   .wrap { padding: 1.25rem .9rem 2rem; }
   header.site, .panel, .page { padding: 1.15rem 1.1rem; }

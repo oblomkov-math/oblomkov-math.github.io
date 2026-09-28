@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lean in Mathematics and AI: a learning seminar</title>
+  <meta name="author" content="Alexei Oblomkov">
+  <meta name="description"
+        content="Learning seminar on formalizing mathematics in Lean 4 and Mathlib, University of Massachusetts Amherst">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <p class="crumb"><a href="index.html">&larr; Alexei Oblomkov</a></p>
+
+  <header class="site">
+    <h1>Lean in Mathematics and AI</h1>
+    <p class="course-term">Learning seminar &middot; University of Massachusetts Amherst &middot; Fall 2026</p>
+    <dl class="course-meta">
+      <dt>Meetings</dt>
+      <dd>Fridays, 11:15 AM&ndash;12:15 PM, LGRT 1681</dd>
+      <dt>Organizer</dt>
+      <dd>Alexei Oblomkov, LGRT 1234H</dd>
+      <dt>Email</dt>
+      <dd><a href="mailto:oblomkov@math.umass.edu">oblomkov@math.umass.edu</a></dd>
+      <dt>Repository</dt>
+      <dd><a href="https://github.com/oblomkov-math/lean-seminar">github.com/oblomkov-math/lean-seminar</a></dd>
+      <dt>Questions</dt>
+      <dd><a href="https://github.com/oblomkov-math/lean-seminar/discussions">the seminar's Discussions board</a>, any time</dd>
+    </dl>
+  </header>
+
+  <div class="page">
+    <h2>Overview</h2>
+    <p>
+      <a href="https://lean-lang.org/">Lean</a> is a language for writing mathematical proofs
+      that a computer checks line by line, and
+      <a href="https://leanprover-community.github.io/">Mathlib</a> is its library of
+      formalized mathematics, from linear algebra to measure theory. In this seminar we learn
+      to use them, and each participant formalizes problems from the department's
+      qualifying exams. No prior Lean or type theory is needed.
+    </p>
+    <p>
+      There is no grading. The seminar ends with participants presenting their
+      formalizations to each other.
+    </p>
+    <p>
+      We meet one hour a week, and most of the work happens at home. Each week has reading
+      and exercises, listed in the schedule below; the exercise files are in the seminar's
+      GitHub repository. The meetings are for live demos, getting unstuck, and looking at
+      each other's proofs.
+    </p>
+    <p>
+      Why qualifying-exam problems? In recent tests, the best AI systems produced no valid
+      Lean proof of any algebra problem at qualifying-exam level
+      (<a href="https://arxiv.org/abs/2511.02872">FATE</a>), and proved at most 1% of such
+      problems in analysis (<a href="https://arxiv.org/abs/2606.13782">MA-ProofBench</a>).
+      A formalized qualifying-exam problem is something current AI systems cannot produce on
+      their own.
+    </p>
+
+    <h2>Before the first meeting</h2>
+    <ol>
+      <li>
+        <strong>Install Lean.</strong> Install VS Code and its Lean&nbsp;4 extension by
+        following the <a href="https://lean-lang.org/install/">official instructions</a>.
+        You need about 10&nbsp;GB of free disk space; 16&nbsp;GB of memory is comfortable.
+        No suitable computer? You can work in the browser instead, with the
+        <em>Open in GitHub Codespaces</em> button in the seminar repository.
+      </li>
+      <li>
+        <strong>Get the seminar repository.</strong> With a GitHub account, make your own
+        copy of the repository (the <em>Fork</em> button), then in a terminal:
+<pre>git clone https://github.com/YOUR-GITHUB-NAME/lean-seminar.git
+cd lean-seminar
+lake exe cache get</pre>
+        The last command downloads Mathlib already compiled. Do not skip it: without it,
+        Lean compiles all of Mathlib itself, which takes hours. Then open the
+        <code>lean-seminar</code> folder in VS Code. The repository's
+        <a href="https://github.com/oblomkov-math/lean-seminar#readme">README</a> has the
+        details, including how to get each week's new exercises.
+      </li>
+      <li>
+        <strong>Play the <a href="https://adam.math.hhu.de/">Natural Number Game</a></strong>
+        through at least World&nbsp;4. It runs in the browser.
+      </li>
+      <li>
+        <strong>Watch and type along</strong> with Alex Kontorovich's
+        <a href="https://www.youtube.com/watch?v=I2zaPoj3G50">How Mathematicians can Get
+        Started with Lean</a> (32 minutes), in the file
+        <code>Exercises/Week00_Squeeze.lean</code>. He proves the squeeze theorem, but the
+        video stops before the proof is finished. Finishing it is your first exercise.
+      </li>
+    </ol>
+
+    <h3>Things that trip up beginners</h3>
+    <ul>
+      <li>
+        The lines of a proof after <code>by</code> must be indented. Use spaces: Lean
+        rejects tab characters.
+      </li>
+      <li>
+        Symbols are typed with backslash codes: <code>\R</code> gives &#8477;,
+        <code>\N</code> gives &#8469;, <code>\to</code> gives &rarr;, <code>\e</code> gives
+        &epsilon;, <code>\&lt;</code> gives &#10216;. The code turns into the symbol when
+        you type a space after it.
+      </li>
+      <li>Powers are written <code>x ^ 2</code>; Lean does not understand <code>x&sup2;</code>.</li>
+      <li>
+        Names of hypotheses, like <code>h</code> or <code>n_gt_N</code>, are labels you
+        choose. Lean never reads them; the meaning comes from the statement.
+      </li>
+      <li>
+        If the goals shown seem to stop partway through a proof, look for an error above
+        that point: after a syntax error, Lean skips the rest of the proof.
+      </li>
+      <li>
+        The goals appear in VS Code's Lean Infoview panel. <kbd>Cmd+Shift+Enter</kbd>
+        (<kbd>Ctrl+Shift+Enter</kbd> on Windows and Linux) shows or hides it.
+      </li>
+    </ul>
+
+    <h2>How the seminar works</h2>
+    <ul>
+      <li>
+        <strong>Meetings</strong> take one hour: about 20 minutes of live demo of the
+        week's topic, 30 minutes on problems people hit at home, and 10 minutes previewing
+        the next week.
+      </li>
+      <li>
+        <strong>At home</strong> you do the week's reading and exercises, listed in the
+        schedule. New exercise files appear in the repository's <code>Exercises</code>
+        folder each week.
+      </li>
+      <li>
+        <strong>Questions</strong> go to the
+        <a href="https://github.com/oblomkov-math/lean-seminar/discussions">Discussions
+        board</a>, whenever you are stuck; do not wait for the meeting. For general Lean
+        questions, the Lean community's <a href="https://leanprover.zulipchat.com/">Zulip
+        chat</a> answers fast, especially the channels <em>#new members</em> and
+        <em>#Is there code for X?</em>
+      </li>
+      <li>
+        <strong>Your project</strong> starts in week 11: you formalize problems of your
+        choice from the department's qualifying exams (see Projects below), and present
+        your work in week 13 or 14.
+      </li>
+    </ul>
+
+    <h2>Schedule</h2>
+    <p>
+      MiL is <a href="https://leanprover-community.github.io/mathematics_in_lean/"><em>Mathematics
+      in Lean</em></a>, a free online book with exercises built in.
+    </p>
+    <div class="table-scroll">
+      <table class="schedule">
+        <thead>
+          <tr><th>Week</th><th>In the meeting</th><th>At home</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>0</td>
+              <td>Before the first meeting</td>
+              <td>Install Lean; the Natural Number Game; the video and <code>Week00_Squeeze.lean</code></td></tr>
+          <tr><td>1</td>
+              <td>Propositions as types; term and tactic mode; reading the Infoview</td>
+              <td>MiL chapters 1&ndash;2, with exercises</td></tr>
+          <tr><td>2</td>
+              <td>Logic and quantifiers: <code>intro</code>, <code>apply</code>, <code>exact</code>,
+                  <code>obtain</code>, <code>use</code>, <code>constructor</code>, <code>calc</code></td>
+              <td>MiL chapter 3</td></tr>
+          <tr><td>3</td>
+              <td>Structures, typeclasses and coercions: why <code>Group G</code> is written
+                  <code>[Group G]</code></td>
+              <td>MiL chapters 6&ndash;7; build a small algebraic hierarchy by hand</td></tr>
+          <tr><td>4</td>
+              <td>Finding things in Mathlib: naming conventions, <code>exact?</code>,
+                  <code>apply?</code>, <code>rw?</code>; Loogle, LeanSearch, Lean Finder</td>
+              <td>Lemma hunt: twenty goals, find the lemma for each</td></tr>
+          <tr><td>5</td>
+              <td>Automation and its limits: <code>simp</code>, <code>ring</code>,
+                  <code>linarith</code>, <code>norm_num</code>, <code>omega</code>,
+                  <code>positivity</code> and others</td>
+              <td>For each tactic, a goal it solves and a nearly identical one it cannot</td></tr>
+          <tr><td>6</td>
+              <td>Does the statement say what you mean? Junk values, vacuous hypotheses,
+                  <code>#print axioms</code></td>
+              <td>The exercises in <code>Seminar/Diagnostics.lean</code></td></tr>
+          <tr><td>7</td>
+              <td>Algebra in Mathlib: Sylow theorems, Galois theory, Noetherian rings,
+                  localization</td>
+              <td>Textbook algebra problems, then one graduate-level problem</td></tr>
+          <tr><td>8</td>
+              <td>Analysis in Mathlib: limits through filters, measure theory, complex
+                  analysis</td>
+              <td>Undergraduate analysis problems</td></tr>
+          <tr><td>9</td>
+              <td>AI assistants as tools: connecting one to Lean</td>
+              <td>Set one up; a timing experiment: four goals with the assistant, four
+                  without</td></tr>
+          <tr><td>10</td>
+              <td>Lean in AI research: benchmarks, and what their numbers mean</td>
+              <td>Two or three papers from the reading list below</td></tr>
+          <tr><td>11</td>
+              <td>Feasibility checks: which chosen problems need rescoping</td>
+              <td>Choose your problem; post its feasibility check; comment on others'</td></tr>
+          <tr><td>12</td>
+              <td>Organizing a larger proof; debugging clinic</td>
+              <td>Your project; open a draft pull request early</td></tr>
+          <tr><td>13</td>
+              <td>Presentations</td>
+              <td>Your project; rehearse your talk with another participant</td></tr>
+          <tr><td>14</td>
+              <td>Presentations</td>
+              <td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Projects</h2>
+    <p>
+      From week 11 you formalize problems from the department's qualifying exams. What is
+      hard on paper and what is hard in Lean are different things, so choosing a problem
+      matters as much as solving it.
+    </p>
+    <ul>
+      <li>
+        <strong>Easy in Lean, hard on paper:</strong> problems whose theorem Mathlib already
+        has in the right generality. A finite $p$-group has nontrivial center; the Sylow
+        theorems; Cayley&ndash;Hamilton; dominated convergence. These take a few lines.
+      </li>
+      <li>
+        <strong>Routine on paper, expensive in Lean:</strong> classifying the groups of order
+        12; computing a Jordan form (Mathlib has no Jordan normal form); evaluating one
+        specific contour integral; computing the homology of the Klein bottle. In Lean, a
+        general theorem is often easier than one specific instance.
+      </li>
+      <li>
+        <strong>Good projects sit in between:</strong> the objects are in Mathlib, but the
+        argument is more than one lemma. For example Noetherian and Artinian rings, integral
+        extensions and going-up, flatness criteria, discrete valuation rings, $L^p$ duality,
+        or the Galois group of a specific polynomial.
+      </li>
+    </ul>
+
+    <h3>Choose a scope</h3>
+    <ul>
+      <li><strong>Breadth:</strong> three or four problems proved, at the level of textbook exercises.</li>
+      <li><strong>Depth:</strong> one or two harder problems proved.</li>
+      <li>
+        <strong>Library-building:</strong> one problem that needs at least one new definition,
+        with the lemmas to use it. This is beyond what current AI systems can do.
+      </li>
+    </ul>
+
+    <h3>The feasibility check, week 11</h3>
+    <p>Before committing to a problem, work through five things:</p>
+    <ol>
+      <li>A Lean statement of the problem that compiles, with <code>sorry</code> as its proof.</li>
+      <li>Each object in the statement, with its name in Mathlib. Note anything Mathlib does not have.</li>
+      <li>An example that satisfies all the hypotheses, so the statement is not vacuous.</li>
+      <li>
+        For each partial operation in the statement, like division, subtraction of natural
+        numbers or logarithms: one line on why Lean's convention at the boundary does not
+        change the meaning. (In Lean, $x/0 = 0$ and $3 - 5 = 0$ in $\mathbb{N}$.)
+      </li>
+      <li>Three Mathlib lemmas you expect to use.</li>
+    </ol>
+    <p>
+      Start from <code>Seminar/ProjectTemplate.lean</code>; the repository's
+      <code>Projects/README.md</code> explains where to put your files. Then post the check
+      with the <em>Feasibility check</em> form under the repository's Issues. If a problem
+      fails one of the five, that is worth knowing early: we will help you rescope it or
+      choose another.
+    </p>
+
+    <h2>Presentations</h2>
+    <p>
+      In weeks 13 and 14, each participant gives a talk of 20&ndash;25 minutes, including
+      questions. A talk shows:
+    </p>
+    <ul>
+      <li>the Lean statement next to the exam's wording;</li>
+      <li>
+        what formalizing made you decide: what the problem left implicit, where the Lean
+        statement differs from the exam's wording and why that is harmless, and what
+        formalizing revealed about the proof;
+      </li>
+      <li>the proof, with <code>#print axioms</code> for each main theorem;</li>
+      <li>anything not finished yet. An honest partial result makes a good talk.</li>
+    </ul>
+    <p>
+      Before your talk, add your project to the repository with a pull request.
+      <code>scripts/check.sh</code> in the repository tells you whether a proof is really
+      finished: Lean accepts a file containing <code>sorry</code> with only a warning.
+    </p>
+
+    <h3>Talks</h3>
+    <p>To be announced.</p>
+
+    <h2>Resources</h2>
+    <h3>Books</h3>
+    <ul class="reading">
+      <li><a href="https://leanprover-community.github.io/mathematics_in_lean/"><em>Mathematics in Lean</em></a>,
+          <span class="by">by J. Avigad and P. Massot. The main text.</span></li>
+      <li><a href="https://lean-lang.org/theorem_proving_in_lean4/"><em>Theorem Proving in Lean 4</em></a>,
+          <span class="by">by J. Avigad, L. de Moura, S. Kong and S. Ullrich. For looking up how Lean itself works.</span></li>
+      <li><a href="https://hrmacbeth.github.io/math2001/"><em>The Mechanics of Proof</em></a>,
+          <span class="by">by H. Macbeth. Gentler and slower, if the first weeks feel fast.</span></li>
+    </ul>
+
+    <h3>Finding lemmas</h3>
+    <ul class="reading">
+      <li><a href="https://leanprover-community.github.io/mathlib4_docs/">Mathlib documentation</a>
+          <span class="by">&mdash; browse everything in the library.</span></li>
+      <li><a href="https://loogle.lean-lang.org/">Loogle</a>
+          <span class="by">&mdash; search by the shape of a statement.</span></li>
+      <li><a href="https://leansearch.net/">LeanSearch</a> and <a href="https://leanfinder.github.io/">Lean Finder</a>
+          <span class="by">&mdash; search in plain English.</span></li>
+      <li><a href="https://lean-lang.org/doc/reference/latest/">The Lean language reference</a>
+          <span class="by">&mdash; including an index of all tactics.</span></li>
+    </ul>
+
+    <h3>Problems and papers</h3>
+    <ul class="reading">
+      <li><a href="https://github.com/frenzymath/FATE">FATE</a>
+          <span class="by">&mdash; algebra problems stated in Lean, from textbook to qualifying-exam level.</span></li>
+      <li><a href="https://arxiv.org/abs/2606.13782">MA-ProofBench</a>
+          <span class="by">&mdash; the same for analysis.</span></li>
+      <li><a href="https://arxiv.org/abs/2603.26996">FormalProofBench</a>,
+          <a href="https://arxiv.org/abs/2603.02668">SorryDB</a>,
+          <a href="https://arxiv.org/abs/2510.01346">Aristotle</a>,
+          <a href="https://arxiv.org/abs/2510.15940">Lean Finder</a>
+          <span class="by">&mdash; papers for week 10.</span></li>
+      <li>J. Avigad, <a href="https://arxiv.org/abs/2311.00007"><em>Mathematics and the formal turn</em></a>
+          <span class="by">&mdash; why formalization matters to mathematicians.</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$']] },
+    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+  };
+</script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

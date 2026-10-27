@@ -57,6 +57,11 @@ header.site .contact {
   font-size: .95rem;
 }
 header.site .contact a { color: var(--accent); }
+header.site .education {
+  margin-top: .9rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
 .links-row {
   display: flex;
   flex-wrap: wrap;
